@@ -1,0 +1,89 @@
+CLASE 1 ------------------------------------------
+
+Metodos de arrays : en general - .map , .filter , .find
+Destructuring 
+Rest/Spread operator (...)
+Arrow functions
+Modulos
+
+
+
+CLASE 2 ------------------------------------------
+
+1) Instalacion de Node.js
+2) Verificar versiones de node.js y NPM (superior a 18.x y 8.x respectivamente)
+3) Instalacion del entorno : Vite.js
+
+webpack + babel
+
+
+Need to install the following packages:
+create-vite@5.2.3
+
+Correr a ejecutar la app
+
+Node.js : Entorno de ejecucion de Javascript
+
+
+
+pwd : nos muestra la ruta actual
+
+
+> npm create vite@latest : crea un proyecto de vite, es decir, nos crea una carpeta con archivos en el sistema operativo
+> cd nombreCarpeta : nos movemos a la carpeta creada
+> npm install : instala las dependencias del proyecto
+> npm run dev : corre el proyecto en modo desarrollo
+
+
+
+CLASE 3 ------------------------------------------
+
+JSX
+
+JSX es una extension de la sintaxis de JavaScript que nos permite escribir HTML en JavaScript de manera mas sencilla y legible y que luego es transformado a JavaScript puro mediante Babel.
+
+< App />
+
+
+
+CLASE 4 ------------------------------------------
+
+Props : son los parametros que se le pasan a un componente. Por default son de solo lectura y no se pueden modificar y viene predefinido como un objeto. 
+
+
+Estados de un componente : Queda pendiente y se ve la clase que viene
+
+imagenes
+
+css frameworks
+
+- bootstrap : https://getbootstrap.com/  | https://react-bootstrap.github.io/
+- tailwind (*) : https://tailwindcss.com/
+https://tailwindcss.com/docs/guides/vite
+- Material UI : https://mui.com/
+- Ant Design : https://ant.design/
+
+
+
+AFTER 1 ------------------------------------------
+
+Common Command Line Commands
+
+cd : change directory - Cambia el directorio actual
+ls : list - Muestra los archivos y carpetas en el directorio actual
+pwd : print working directory - Muestra la ruta del directorio actual
+touch : crea un archivo
+mkdir : crea una carpeta
+rm : remove - Elimina un archivo
+rm -r : remove recursively - Elimina una carpeta
+code . : abre Visual Studio Code en el directorio actual
+
+
+git init : inicializa un repositorio de git - crea una carpeta llamada .git en el directorio actual
+
+git status : muestra el estado de los archivos en el repositorio de git
+
+git clone
+git add
+git commit
+git push
