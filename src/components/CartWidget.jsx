@@ -1,6 +1,6 @@
 function CartWidget() {
   return (
-    <div className=" flex flex-row justify-around items-center gap-4 mx-10">
+    <div className="flex flex-row items-center justify-around gap-4 mx-10 ">
       <img
         src="/imagenCarrito.png"
         alt="Imagen de un carrito"

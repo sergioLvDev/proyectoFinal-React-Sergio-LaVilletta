@@ -87,3 +87,253 @@ git clone
 git add
 git commit
 git push
+
+
+CLASE 5 ------------------------------------------
+
+Tailwind extensiones : 
+
+https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek
+https://marketplace.visualstudio.com/items?itemName=heybourn.headwind
+https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+
+Hooks : es una funcion que nos permite agregar funcionalidades a un componente. Siempre se ejecutan dentro de un componente y no se pueden ejecutar en un condicional o un loop.
+
+- useState : nos permite agregar estados a un componente
+- useEffect : nos permite agregar efectos secundarios a un componente
+- useRef
+- useContext
+
+Destructuring 
+
+const nombres = ['Juan', 'Pedro', 'Maria'];
+
+const juan = nombres[0];
+const pedro = nombres[1];
+const maria = nombres[2];
+
+const [juan,pedro,maria] = nombres
+
+
+const [var1,var2,...varN] = elArrayOriginal
+
+
+
+
+
+EJEMPLO 1 : 
+
+import { useState } from "react"
+
+
+function Button(props) {
+  //estados
+  /*
+  const arrayDeValores = useState("valor inicial")
+  const miEstado = arrayDeValores[0]//Esta es la variable reactiva o el "estado"
+  const setMiEstado = arrayDeValores[1]//Esta es la función que modifica el estado 
+  */
+  const [miEstado, setMiEstado] = useState("valor inicial")
+
+  //arrayDeValores[0] = "nuevo valor"
+  
+  /* const valores2 = useState(0)
+  
+  console.log(valores1)
+  console.log(valores2) */
+
+
+  //acciones
+  const hacerClick = () => {
+    console.log("click")
+    //miEstado = 'nuevo valor'
+    setMiEstado("nuevo valor")
+  }
+  
+
+  //vista
+  return (
+    <button className="btn" onClick={hacerClick}>{miEstado}</button>
+  )
+}
+
+export default Button
+
+
+
+
+
+EJEMPLO 2
+
+
+import { useState } from "react"
+
+function Button() {
+  //Estado
+  const [contador,setContador] = useState(0)
+
+  //Acciones
+  const hacerClick = () => {
+    console.log("Click")
+    //contador++
+    //contador = contador + 1
+    //contador += 1
+    //console.log(contador)
+    //setContador(contador++)
+    setContador(contador + 1)
+  }
+
+  //Vista
+  return (
+    <div>
+      <button onClick={hacerClick} className="btn">click</button>
+      <p>Contador : {contador}</p>
+    </div>
+  )
+}
+export default Button
+
+
+
+
+
+CLASE 6 ------------------------------------------
+
+Tipos de componentes : 
+
+- Estructurales 
+- Reutilizables
+
+- Contenedores -> Presentacionales
+
+Container Design Pattern : es un patron de diseño que nos permite separar la logica de negocio de la logica de presentacion.
+
+
+API
+
+API WEB - API REST
+
+
+https://github.com/public-apis/public-apis
+https://randomfox.ca/floof/
+
+
+https://fakestoreapi.com/docs 
+https://dummyjson.com/docs/products#products-all
+https://www.themealdb.com/api.php
+
+
+
+CLASE 7 ------------------------------------------
+
+MVC : Modelo, Vista, Controlador 
+
+Reejecucion de un componente : 
+
+1) Cada vez que un estado cambia
+2) Cada vez que cambian los props
+3) Cada vez que un componente padre se re-renderiza
+
+
+const nombres = ['Juan', 'Pedro', 'Maria'];
+
+const r = nombres.forEach((item,index)=>{
+
+})
+
+const r = nombres.map((item,index)=>{
+  return "horacio" + index
+})
+//[horacio0,horacio1,horacio2]
+
+
+nombres.filter((item,index)=>{})
+nombres.find((item,index)=>{})
+nombres.reduce(()=>{})
+nombres.sort(()=>{})
+
+
+AFTER 2 ------------------------------------------
+
+https://tailblocks.cc/
+https://mambaui.com/components/profile
+https://marketplace.visualstudio.com/items?itemName=alfredbirk.tailwind-documentation
+https://magicui.design/docs/components/dot-pattern
+https://ui.aceternity.com/
+https://ui.shadcn.com/
+https://javascript.info/fetch-api
+
+Fetch => Api WEB
+fetch() => Function
+
+Promise => Api WEB
+promise => Object
+
+HTTP => HyperText Transfer Protocol
+
+
+Request(Cliente)
+
+URL/IP - METODO(GET/POST/PUT/DELETE)
+HEADERS - BODY
+
+
+Response(Servidor)
+
+CODIGO - MENSAJE
+
+1xx - Información
+2xx - Aceptado
+3xx - Redireccionado
+4xx - Error de cliente
+    401 - Unauthorized
+    403 - Forbidden
+    404 - Not Found
+    405 - Method Not Allowed
+
+5xx - Error de servidor
+    500 - Internal Server Error
+    502 - Bad Gateway
+    503 - Service Unavailable
+    504 - Gateway Timeout
+
+    HEADERS - BODY
+
+
+fetch("https://dummyjson.com/products")
+.then((res)=>{
+
+  res.status//200
+  res.ok //true
+  res.headers //{...}
+  res.body
+  
+  res.text()
+  res.formData()
+  res.arrayBuffer()
+  res.blob()
+
+  return res.json()
+})
+.then((res)=>{
+  console.log(res)
+})
+.catch((err)=>{
+  
+})
+
+
+
+CLASE 8 --------------------------------------------------------------------
+
+Hooks : hacer hooks customizados
+Children : otra manera de pasar props
+Evento de teclado (pendiente) - evento de resize
+Patrones : HoC
+
+
+  //useEffect(() => {}) : se ejecuta una vez y cada vez que el componente recargue
+  //useEffect(() => {},[]) : se ejecuta una vez sola
+  //useEffect(() => {},[x,y]) : se ejecuta una vez al principio y cuando cambia el valor de x o y
+  //useEffect(() => { return ()=>{} },[])

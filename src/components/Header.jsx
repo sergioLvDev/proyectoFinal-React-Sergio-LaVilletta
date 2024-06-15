@@ -2,8 +2,8 @@ import NavBar from "./NavBar.jsx";
 
 function Header() {
   return (
-    <header className="bg-cyan-500 flex flex-row justify-between items-center px-5 font-bold  p-6">
-      <h1 className="text-black text-3xl font-serif mx-10">Titulo</h1>
+    <header className="flex items-center justify-between px-5 py-12 font-bold bg-cyan-500">
+      <h1 className="mx-10 font-serif text-3xl text-black">Titulo</h1>
       <NavBar />
     </header>
   );

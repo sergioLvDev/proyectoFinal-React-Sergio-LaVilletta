@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer>
-      <p>Copy right 2024; - Sergio Ariel La Villetta</p>
+    <footer className="flex items-center justify-center p-3 font-sans text-xs text-black bg-cyan-500">
+      <p>Copyright 2024 &copy; - Sergio Ariel La Villetta</p>
     </footer>
   );
 }
