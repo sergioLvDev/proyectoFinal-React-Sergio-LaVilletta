@@ -15,3 +15,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+a.active {
+  @apply text-blue-500;
+}
