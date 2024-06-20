@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import TituloPagina from "./TituloPagina";
 
-function ItemListContainer() {
-  const [items, setItems] = useState([]);
+function ItemDetailContainer() {
+  const [items, setItems] = useState({});
   const params = useParams();
 
   useEffect(() => {
     if (params.id) {
-      fetch("https://dummyjson.com/products/category/" + params.id)
+      fetch("https://dummyjson.com/products/" + params.id)
         .then((res) => {
           return res.json();
         })
         .then((data) => {
-          setItems(data.products);
+          setItems(data);
         });
     } else {
       fetch("https://dummyjson.com/products")
@@ -29,10 +29,10 @@ function ItemListContainer() {
 
   return (
     <div>
-      <TituloPagina Titulo={"Productos"} />
-      <ItemList items={items} />
+      <TituloPagina Titulo={"Producto " + params.id} />
+      <ItemDetail items={items} />
     </div>
   );
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;

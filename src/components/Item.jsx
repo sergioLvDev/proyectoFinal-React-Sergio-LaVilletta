@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 function Item({ item }) {
@@ -13,7 +14,9 @@ function Item({ item }) {
         <h2 className="font-bold truncate">{item.title}</h2>
         <p className="text-gray-400">${item.price}</p>
         <div className="flex justify-center">
-          <Button />
+          <Link to={`/item/${item.id}`}>
+            <Button />
+          </Link>
         </div>
       </article>
     </div>

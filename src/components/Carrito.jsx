@@ -1,7 +1,9 @@
+import TituloPagina from "./TituloPagina";
+
 function Carrito() {
   return (
     <div>
-      <h2>Carrito</h2>
+      <TituloPagina Titulo="Carrito" />
       <p>Articulos en el carrito</p>
       <form>
         <div>
