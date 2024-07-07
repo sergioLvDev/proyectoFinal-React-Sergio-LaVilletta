@@ -4,9 +4,8 @@ import { useParams } from "react-router-dom";
 import TituloPagina from "./TituloPagina";
 
 function ItemDetailContainer() {
-  const [items, setItems] = useState({});
+  const [items, setItems] = useState([]);
   const params = useParams();
-
   useEffect(() => {
     if (params.id) {
       fetch("https://dummyjson.com/products/" + params.id)
@@ -15,22 +14,23 @@ function ItemDetailContainer() {
         })
         .then((data) => {
           setItems(data);
+          console.log(data);
         });
     } else {
-      fetch("https://dummyjson.com/products")
+      fetch("https://dummyjson.com/products/")
         .then((res) => {
           return res.json();
         })
         .then((data) => {
-          setItems(data.products);
+          setItems(data);
         });
     }
   }, [params.id]);
-
+  console.log(items);
   return (
     <div>
       <TituloPagina Titulo={"Producto " + params.id} />
-      <ItemDetail items={items} />
+      <ItemDetail itemsDe={items} />
     </div>
   );
 }
