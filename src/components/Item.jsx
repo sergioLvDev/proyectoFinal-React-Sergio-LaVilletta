@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
@@ -15,7 +14,7 @@ function Item({ item }) {
         <p className="text-gray-400">${item.price}</p>
         <div className="flex justify-center">
           <Link to={`/item/${item.id}`}>
-            <Button />
+            <Button text={"Ver más"} />
           </Link>
         </div>
       </article>

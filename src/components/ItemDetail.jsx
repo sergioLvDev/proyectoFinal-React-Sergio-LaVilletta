@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 function ItemDetail({ itemsDe }) {
   return (
     <section className="w-2/3 gap-8 p-4 text-center rounded-sm bg-slate-800 ">

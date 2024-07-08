@@ -1,3 +1,4 @@
+import Button from "./Button";
 import TituloPagina from "./TituloPagina";
 import { useForm } from "react-hook-form";
 
@@ -33,12 +34,13 @@ function Contacto() {
           </label>
           <input type="tel" {...register("telefono")} />
         </div>
-        <button
-          type="submit"
-          className="px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-blue-500 rounded-lg cursor-pointer hover:bg-cyan-800"
-        >
-          Enviar
-        </button>
+        <div>
+          <label htmlFor="edad" className="mr-2">
+            Edad
+          </label>
+          <input type="number" {...register("edad")} />
+        </div>
+        <Button text="Submit" />
       </form>
     </div>
   );
