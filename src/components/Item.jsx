@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+/* import { miContexto } from "../App";*/
 
 function Item({ item }) {
+  /*  const valorDelContexto = useContext(miContexto);
+  console.log(valorDelContexto);
+  valorDelContexto.fn(); */
   return (
     <div>
       <article className="p-4 text-black transition-all bg-white rounded-md shadow-xl hover:scale-105">
