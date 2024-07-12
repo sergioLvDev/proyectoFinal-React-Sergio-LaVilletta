@@ -14,7 +14,6 @@ function ItemDetailContainer() {
         })
         .then((data) => {
           setItems(data);
-          console.log(data);
         });
     } else {
       fetch("https://dummyjson.com/products/")
@@ -26,7 +25,7 @@ function ItemDetailContainer() {
         });
     }
   }, [params.id]);
-  console.log(items);
+
   return (
     <div>
       <TituloPagina Titulo={"Producto " + params.id} />

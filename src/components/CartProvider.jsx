@@ -1,15 +1,18 @@
 import { createContext } from "react";
+import { useState } from "react";
 
 export const miContexto = createContext(); // es el contexto y a la vez un objeto
 const Provider = miContexto.Provider; // utilizo la propiedad Provider del objeto miContexto como un componente
-console.log(miContexto);
 
-function CartProvider(props) {
+function CartProvider({ children }) {
+  const [carritoCant, setCarritoCant] = useState(0);
+
   const valorDelContexto = {
-    carritoCant: 0,
-    loggedIn: false,
-    fn: () => console.log("Hola"),
+    cant: carritoCant,
+    fn: () => {
+      setCarritoCant(carritoCant + 1);
+    },
   };
-  return <Provider value={valorDelContexto}>{props.children}</Provider>;
+  return <Provider value={valorDelContexto}>{children}</Provider>;
 }
 export default CartProvider;

@@ -30,7 +30,7 @@ function ItemListContainer() {
   return (
     <div>
       <TituloPagina Titulo={"Productos"} />
-      <ItemList items={items} />
+      <ItemList items1={items} />
     </div>
   );
 }

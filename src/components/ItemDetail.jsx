@@ -1,15 +1,22 @@
 function ItemDetail({ itemsDe }) {
+  console.log(itemsDe);
   return (
-    <section className="w-2/3 gap-8 p-4 text-center rounded-sm bg-slate-800 ">
-      <img
-        src={itemsDe.images}
-        alt={itemsDe.title}
-        className="object-contain aspect-square"
-      />
-      <h2 className="font-bold truncate">{itemsDe.title}</h2>
-      <p className="text-gray-400">Descripcion: {itemsDe.description}</p>
-      <p className="text-gray-400">Categoria: {itemsDe.category}</p>
-      <p className="text-gray-400">${itemsDe.price}</p>
+    <section className="flex flex-row w-2/4 gap-8 p-4 mx-auto rounded-sm bg-slate-800 ">
+      <div>
+        <img
+          src={itemsDe.images}
+          alt={itemsDe.title}
+          className="object-contain aspect-square"
+        />
+      </div>
+      <div className="flex flex-col gap-8 text-start">
+        <h2 className="p-2 font-bold underline uppercase truncate">
+          {itemsDe.title}
+        </h2>
+        <p className="text-gray-400">Descripcion: {itemsDe.description}</p>
+        <p className="text-gray-400">Stock: {itemsDe.stock}</p>
+        <p className="text-gray-400">${itemsDe.price}</p>
+      </div>
     </section>
   );
 }
