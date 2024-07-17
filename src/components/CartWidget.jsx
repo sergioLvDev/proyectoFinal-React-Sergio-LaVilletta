@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { miContexto } from "./CartProvider";
 
 function CartWidget() {
-  const valorDelContexto = useContext(miContexto);
+  const { cantidadEnCarrito } = useContext(miContexto);
 
   return (
     <div className="flex flex-row items-center justify-around gap-4 mx-10 ">
@@ -11,7 +11,7 @@ function CartWidget() {
         alt="Imagen de un carrito"
         className="w-10"
       />
-      <p>{valorDelContexto.cant}</p>
+      <p>{cantidadEnCarrito()}</p>
     </div>
   );
 }

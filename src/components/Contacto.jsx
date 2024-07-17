@@ -12,35 +12,20 @@ function Contacto() {
   return (
     <div>
       <TituloPagina Titulo="Contacto" />
-      <form
-        className="flex flex-col items-start gap-3 mx-10 "
-        onSubmit={handleSubmit(enviar)}
-      >
-        <div>
-          <label htmlFor="nombre" className="mr-2">
-            Nombre
-          </label>
-          <input type="text" {...register("nombre")} />
+      <form onSubmit={handleSubmit(enviar)}>
+        <div className="flex items-start gap-10 mx-3 mb-5 ">
+          <div className="flex flex-col gap-2 ">
+            <label htmlFor="nombre">Nombre</label>
+            <label htmlFor="email">E-mail</label>
+            <label htmlFor="telefono">Teléfono</label>
+          </div>
+          <div className="flex flex-col gap-2">
+            <input type="text" {...register("nombre")} />
+            <input type="email" {...register("email")} />
+            <input type="tel" {...register("telefono")} />
+          </div>
         </div>
-        <div>
-          <label htmlFor="email" className="mr-2">
-            E-mail
-          </label>
-          <input type="email" {...register("email")} />
-        </div>
-        <div>
-          <label htmlFor="telefono" className="mr-2">
-            Teléfono
-          </label>
-          <input type="tel" {...register("telefono")} />
-        </div>
-        <div>
-          <label htmlFor="edad" className="mr-2">
-            Edad
-          </label>
-          <input type="number" {...register("edad")} />
-        </div>
-        <Button text="Submit" />
+        <Button text="Submit" type="submit" />
       </form>
     </div>
   );
