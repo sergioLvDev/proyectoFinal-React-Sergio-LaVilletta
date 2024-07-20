@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import TituloPagina from "./TituloPagina";
+import { generateProducts } from "../actions";
+import { getProducts, getProductsByCategory } from "../actions";
+//generateProducts(5);
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
@@ -9,21 +12,13 @@ function ItemListContainer() {
 
   useEffect(() => {
     if (params.id) {
-      fetch("https://dummyjson.com/products/category/" + params.id)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setItems(data.products);
-        });
+      getProductsByCategory(params.id).then((res) => {
+        setItems(res);
+      });
     } else {
-      fetch("https://dummyjson.com/products")
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setItems(data.products);
-        });
+      getProducts().then((res) => {
+        setItems(res);
+      });
     }
   }, [params.id]);
 
