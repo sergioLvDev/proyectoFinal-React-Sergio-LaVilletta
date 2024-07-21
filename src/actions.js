@@ -9,7 +9,7 @@ import {
   where,
 } from "firebase/firestore";
 
-const db = getFirestore(app);
+export const db = getFirestore(app);
 const collectionDeProductos = collection(db, "productos");
 
 export function generateProducts(cant) {
@@ -69,12 +69,28 @@ export function getProductsByCategory(category = "Tools") {
       console.log("Hubo un error");
     });
 }
+export function getProductsById(category = "id") {
+  const filtro = query(
+    collectionDeProductos,
+    where("category", "==", category)
+  );
+  return getDocs(filtro)
+    .then((res) => {
+      const productos = res.docs.map((doc) => {
+        const producto = doc.data();
+        producto._id = doc.id;
+        return producto;
+      });
+      return productos;
+    })
+    .catch(() => {
+      console.log("Hubo un error");
+    });
+}
 
-export function getProductsById() {
-  const id = "JSeN0hs1Bn0fUCsBv3xh";
+/* export function getProductsById(id) {
   const filtro = doc(collectionDeProductos, id);
   const consulta = getDoc(filtro);
-
   consulta
     .then((res) => {
       const producto = res.data();
@@ -83,7 +99,8 @@ export function getProductsById() {
     })
     .catch((err) => {});
 }
-
+*/
+/* 
 export async function getProductsByIdAsync(id) {
   try {
     //const id = "JSeN0hs1Bn0fUCsBv3xh"
@@ -98,5 +115,5 @@ export async function getProductsByIdAsync(id) {
     return null;
   }
 }
-
+ */
 function createNewOrder() {}

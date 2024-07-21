@@ -4,7 +4,7 @@ import { useState } from "react";
 export const miContexto = createContext(); // es el contexto y a la vez un objeto
 const Provider = miContexto.Provider; // utilizo la propiedad Provider del objeto miContexto como un componente
 
-const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
+const carritoInicial = [];
 
 function CartProvider({ children }) {
   const [carritoCant, setCarritoCant] = useState(carritoInicial);
@@ -35,9 +35,6 @@ function CartProvider({ children }) {
   const vaciarCarrito = () => {
     setCarritoCant([]);
   };
-  useEffect(() => {
-    localStorage.setItem("carrito", JSON.stringify(carritoCant));
-  }, [carritoCant]);
 
   return (
     <Provider

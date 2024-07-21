@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import CartProvider, { miContexto } from "./CartProvider";
+import { miContexto } from "./CartProvider";
 import ItemCount from "./ItemCount";
 import { useState } from "react";
 
@@ -15,7 +15,7 @@ function ItemDetail({ itemsDe }) {
   const handleClickSumar = () => {
     cantidad < itemsDe.stock && setcantidad(cantidad + 1);
   };
-
+  console.log(itemsDe);
   return (
     <section className="flex flex-row items-center justify-center w-[50%] gap-8 p-4 mx-auto rounded-sm bg-slate-800 ">
       <div>

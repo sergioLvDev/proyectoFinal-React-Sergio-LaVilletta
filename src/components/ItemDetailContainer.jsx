@@ -2,27 +2,23 @@ import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import TituloPagina from "./TituloPagina";
+import { getProductsById } from "../actions";
+import { getProducts } from "../actions";
 
 function ItemDetailContainer() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState();
   const params = useParams();
+
   useEffect(() => {
     if (params.id) {
-      fetch("https://dummyjson.com/products/" + params.id)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setItems(data);
-        });
+      getProductsById(params.id).then((res) => {
+        console.log(res);
+        setItems(res);
+      });
     } else {
-      fetch("https://dummyjson.com/products/")
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setItems(data);
-        });
+      getProducts().then((res) => {
+        setItems(res);
+      });
     }
   }, [params.id]);
 
