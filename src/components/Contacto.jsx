@@ -20,9 +20,9 @@ function Contacto() {
             <label htmlFor="telefono">Teléfono</label>
           </div>
           <div className="flex flex-col gap-2">
-            <input type="text" {...register("nombre")} />
-            <input type="email" {...register("email")} />
-            <input type="tel" {...register("telefono")} />
+            <input type="text" required {...register("nombre")} />
+            <input type="email" required {...register("email")} />
+            <input type="tel" required {...register("telefono")} />
           </div>
         </div>
         <Button text="Submit" type="submit" />

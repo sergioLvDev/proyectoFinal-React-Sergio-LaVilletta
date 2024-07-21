@@ -36,13 +36,9 @@ Inicie la aplicación utilizando el comando `npm run dev`
 
 ### 5. Acceder a la aplicación
 
-Acceda a la aplicación en su navegador favorito utilizando la dirección `http://localhost:3000`
+Acceda a la aplicación en su navegador favorito utilizando la dirección `http://localhost:5173`
 
-### 6. Desplegar la aplicación
-
-Despliegue la aplicación en Netlify utilizando el comando `vercel deploy`
-
-### 7.Podes ver el DEMO de este proyecto [aqui](https://tienda-ecommerce1.vercel.app/)
+### 6.Podes ver el DEMO de este proyecto [Aqui-!!!](https://tienda-ecommerce1.vercel.app/)
 
 ## Contribuciones
 

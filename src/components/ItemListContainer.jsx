@@ -21,7 +21,7 @@ function ItemListContainer() {
       });
     }
   }, [params.id]);
-
+  console.log(items);
   return (
     <div>
       <TituloPagina Titulo={"Productos"} />

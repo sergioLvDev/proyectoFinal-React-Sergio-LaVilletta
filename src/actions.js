@@ -6,6 +6,8 @@ import {
   addDoc,
   getDocs,
   query,
+  doc,
+  getDoc,
   where,
 } from "firebase/firestore";
 
@@ -69,11 +71,8 @@ export function getProductsByCategory(category = "Tools") {
       console.log("Hubo un error");
     });
 }
-export function getProductsById(category = "id") {
-  const filtro = query(
-    collectionDeProductos,
-    where("category", "==", category)
-  );
+export function getProductsById(category) {
+  const filtro = query(collectionDeProductos, where("id", "==", category));
   return getDocs(filtro)
     .then((res) => {
       const productos = res.docs.map((doc) => {
@@ -91,15 +90,13 @@ export function getProductsById(category = "id") {
 /* export function getProductsById(id) {
   const filtro = doc(collectionDeProductos, id);
   const consulta = getDoc(filtro);
-  consulta
-    .then((res) => {
-      const producto = res.data();
-      producto._id = res.id;
-      return producto;
-    })
-    .catch((err) => {});
-}
-*/
+  consulta.then((res) => {
+    const producto = res.data();
+    producto._id = res.id;
+    return producto;
+  });
+} */
+
 /* 
 export async function getProductsByIdAsync(id) {
   try {
@@ -116,4 +113,3 @@ export async function getProductsByIdAsync(id) {
   }
 }
  */
-function createNewOrder() {}

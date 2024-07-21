@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { miContexto } from "./CartProvider";
 import TituloPagina from "./TituloPagina";
-import Button from "./Button";
 
 function Carrito() {
   const { carritoCant, precioTotal, vaciarCarrito } = useContext(miContexto);
