@@ -2,11 +2,11 @@
 
 =====================================
 
-## Description
+## Descripcion
 
 Este es un sitio web de e-commerce desarrollado con tecnologías modernas y eficientes. El sitio está diseñado para ser fácil de usar y ofrecer una experiencia de compra sin problemas a los usuarios. Los usuarios pueden navegar por diferentes categorías de productos, agregar productos al carrito y realizar pedidos en línea.
 
-## Technologies Used
+## Technologias Usadas
 
 - React: Se utilizó React para crear la interfaz de usuario interactiva y dinámica.
 - Vite: Se utilizó Vite como herramienta de construcción y desarrollo para mejorar la velocidad y eficiencia del proyecto.
@@ -14,7 +14,7 @@ Este es un sitio web de e-commerce desarrollado con tecnologías modernas y efic
 - lucide-react: Se utilizó Lucide para agregar iconos personalizables y escalables a la interfaz de usuario.
 - tailwindcss: Se utilizó Tailwind CSS como framework de CSS para crear estilos personalizados y responsivos.
 - firebase: Se utilizó Firebase como plataforma de backend para manejar el almacenamiento del sitio web.
-- Netifly: Se utilizó Netlify como plataforma de hosting y despliegue para deployar y servir la aplicación de manera rápida y segura.
+- Vercel: Se utilizó Vercel como plataforma de hosting y despliegue para deployar y servir la aplicación de manera rápida y segura.
 
 ## Instalacion y Uso
 
@@ -40,11 +40,9 @@ Acceda a la aplicación en su navegador favorito utilizando la dirección `http:
 
 ### 6. Desplegar la aplicación
 
-Despliegue la aplicación en Netlify utilizando el comando `netlify deploy`
+Despliegue la aplicación en Netlify utilizando el comando `vercel deploy`
 
-### 7. Configurar variables de entorno
-
-Configure las variables de entorno en Netlify para conectar la aplicación con Firebase.
+### 7.Podes ver el DEMO de este proyecto [aqui](https://tienda-ecommerce1.vercel.app/)
 
 ## Contribuciones
 
