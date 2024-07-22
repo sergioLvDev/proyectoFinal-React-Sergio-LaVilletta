@@ -14,7 +14,7 @@ Este es un sitio web de e-commerce desarrollado con tecnologías modernas y efic
 - lucide-react: Se utilizó Lucide para agregar iconos personalizables y escalables a la interfaz de usuario.
 - tailwindcss: Se utilizó Tailwind CSS como framework de CSS para crear estilos personalizados y responsivos.
 - firebase: Se utilizó Firebase como plataforma de backend para manejar el almacenamiento del sitio web.
-- Vercel: Se utilizó Vercel como plataforma de hosting y despliegue para deployar y servir la aplicación de manera rápida y segura.
+- Netlify: Se utilizó Netlify como plataforma de hosting y despliegue para deployar y servir la aplicación de manera rápida y segura.
 
 ## Instalacion y Uso
 
@@ -38,7 +38,7 @@ Inicie la aplicación utilizando el comando `npm run dev`
 
 Acceda a la aplicación en su navegador favorito utilizando la dirección `http://localhost:5173`
 
-### 6.Podes ver el DEMO de este proyecto [Aqui-!!!](https://tienda-ecommerce1.vercel.app/)
+### 6.Podes ver el DEMO de este proyecto [Aqui-!!!](https://react-tpfinal.netlify.app/)
 
 ## Contribuciones
 
