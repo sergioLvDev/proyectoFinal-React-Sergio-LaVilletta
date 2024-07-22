@@ -19,7 +19,6 @@ function ItemDetailContainer() {
       });
     }
   }, [params.id]);
-  console.log(items);
 
   return (
     <div>

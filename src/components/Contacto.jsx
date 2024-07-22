@@ -5,9 +5,7 @@ import { useForm } from "react-hook-form";
 function Contacto() {
   const { register, handleSubmit } = useForm();
 
-  const enviar = (data) => {
-    console.log(data);
-  };
+  const enviar = (data) => {};
 
   return (
     <div>

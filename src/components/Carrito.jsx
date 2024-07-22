@@ -7,6 +7,7 @@ function Carrito() {
   const handelVaciar = () => {
     vaciarCarrito([]);
   };
+
   return (
     <div>
       <TituloPagina Titulo="Carrito" />

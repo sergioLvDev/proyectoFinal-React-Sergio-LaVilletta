@@ -4,7 +4,6 @@ import ItemCount from "./ItemCount";
 import { useState } from "react";
 
 function ItemDetail({ item }) {
-  console.log(item);
   const { carritoCant, agregarAlCarrito } = useContext(miContexto);
 
   const [cantidad, setcantidad] = useState(1);
@@ -14,7 +13,7 @@ function ItemDetail({ item }) {
   };
 
   const handleClickSumar = () => {
-    cantidad < item.stock && setcantidad(cantidad + 1);
+    setcantidad(cantidad + 1);
   };
 
   return (

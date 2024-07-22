@@ -1,8 +1,8 @@
-import { createContext, useEffect } from "react";
+import { createContext } from "react";
 import { useState } from "react";
 
-export const miContexto = createContext(); // es el contexto y a la vez un objeto
-const Provider = miContexto.Provider; // utilizo la propiedad Provider del objeto miContexto como un componente
+export const miContexto = createContext();
+const Provider = miContexto.Provider;
 
 const carritoInicial = [];
 
@@ -12,8 +12,6 @@ function CartProvider({ children }) {
     const itemAgregado = { ...itemsDe, quantity: cantidad };
 
     const nuevoCarrito = [...carritoCant];
-
-    console.log(nuevoCarrito);
 
     const estaEnCarrito = nuevoCarrito.find((el) => el.id === itemAgregado.id);
 
@@ -40,6 +38,7 @@ function CartProvider({ children }) {
     <Provider
       value={{
         carritoCant,
+        setCarritoCant,
         agregarAlCarrito,
         cantidadEnCarrito,
         precioTotal,

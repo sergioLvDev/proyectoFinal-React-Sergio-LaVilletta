@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import TituloPagina from "./TituloPagina";
-import { generateProducts } from "../actions";
 import { getProducts, getProductsByCategory } from "../actions";
-//generateProducts(5);
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
@@ -21,7 +19,7 @@ function ItemListContainer() {
       });
     }
   }, [params.id]);
-  console.log(items);
+
   return (
     <div>
       <TituloPagina Titulo={"Productos"} />
