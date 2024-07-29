@@ -1,34 +1,39 @@
-import { useContext } from "react";
-import { miContexto } from "./CartProvider";
+import { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { CartContex } from "./CartContex";
 
-function ItemDetail({ item }) {
-  const { carritoCant, agregarAlCarrito } = useContext(miContexto);
+const ItemDetail = ({ item }) => {
+  const { agregarCarrito } = useContext(CartContex);
 
-  const [cantidad, setcantidad] = useState(1);
+  const [cantidad, setCantidad] = useState(1);
 
-  const handleClickRestar = () => {
-    cantidad > 1 && setcantidad(cantidad - 1);
+  const handelRestar = () => {
+    cantidad > 1 && setCantidad(cantidad - 1);
   };
 
-  const handleClickSumar = () => {
-    setcantidad(cantidad + 1);
+  const handelSumar = () => {
+    cantidad < item.stock && setCantidad(cantidad + 1);
   };
 
   return (
-    <section className="flex flex-row items-center justify-center w-[50%] gap-8 p-4 mx-auto rounded-sm bg-slate-800 ">
-      {item.map((i) => (
+    <div className="flex items-center justify-center gap-5">
+      <img src={item.images} alt={item.title} />
+      <div>
+        <h3>{item.title}</h3>
+        <p>Descricion:{item.description}</p>
+        <p>${item.price}</p>
+        <p>Stock: {item.stock}</p>
+        <p>Categoria: {item.category}</p>
         <ItemCount
-          item={i}
-          key={i.id}
           cantidad={cantidad}
-          handleClickSumar={handleClickSumar}
-          handleClickRestar={handleClickRestar}
-          agregarAlCarrito={() => agregarAlCarrito(item, cantidad)}
+          handelRestar={handelRestar}
+          handelSumar={handelSumar}
+          handelAgregarCarrito={() => {
+            agregarCarrito(item, cantidad);
+          }}
         />
-      ))}
-    </section>
+      </div>
+    </div>
   );
-}
+};
 export default ItemDetail;

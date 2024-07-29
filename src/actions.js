@@ -43,18 +43,11 @@ export function getProductsByCategory(category = "Tools") {
       console.log("Hubo un error");
     });
 }
-export function getProductsById(category) {
-  const filtro = query(collectionDeProductos, where("id", "==", category));
-  return getDocs(filtro)
-    .then((res) => {
-      const productos = res.docs.map((doc) => {
-        const producto = doc.data();
-        producto._id = doc.id;
-        return producto;
-      });
-      return productos;
-    })
-    .catch(() => {
-      console.log("Hubo un error");
-    });
+
+export function getProductsById(id) {
+  const filtro = query(collectionDeProductos, where("id", "==", id));
+  return getDocs(filtro).then((res) => {
+    const producto = res.docs[0].data();
+    return producto;
+  });
 }

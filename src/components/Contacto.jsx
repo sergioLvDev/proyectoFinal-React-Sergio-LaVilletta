@@ -9,7 +9,7 @@ function Contacto() {
 
   return (
     <div>
-      <TituloPagina Titulo="Contacto" />
+      <TituloPagina titulo={"Contacto"} />
       <form onSubmit={handleSubmit(enviar)}>
         <div className="flex items-start gap-10 mx-3 mb-5 ">
           <div className="flex flex-col gap-2 ">

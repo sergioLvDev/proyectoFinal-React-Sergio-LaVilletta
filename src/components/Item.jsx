@@ -12,6 +12,7 @@ function Item({ item }) {
         />
         <h2 className="font-bold truncate">{item.title}</h2>
         <p className="text-gray-400">${item.price}</p>
+        <p className="text-gray-400">{item.category}</p>
         <div className="flex justify-center">
           <Link to={`/item/${item.id}`}>
             <Button text={"Ver más"} />

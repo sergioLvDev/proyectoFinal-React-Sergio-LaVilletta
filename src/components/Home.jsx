@@ -3,7 +3,7 @@ import TituloPagina from "./TituloPagina";
 function Home() {
   return (
     <div>
-      <TituloPagina Titulo="Home" />
+      <TituloPagina titulo={"Home"} />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { miContexto } from "./CartProvider";
+import { CartContex } from "./CartContex";
 
 function CartWidget() {
-  const { cantidadEnCarrito } = useContext(miContexto);
+  const { cantidadEnCarrito } = useContext(CartContex);
 
   return (
     <div className="flex flex-row items-center justify-around gap-4 mx-10 ">

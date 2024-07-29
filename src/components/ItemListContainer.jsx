@@ -6,23 +6,26 @@ import { getProducts, getProductsByCategory } from "../actions";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
+  const [titulo, setTitulo] = useState();
   const params = useParams();
 
   useEffect(() => {
     if (params.id) {
       getProductsByCategory(params.id).then((res) => {
         setItems(res);
+        setTitulo(params.id);
       });
     } else {
       getProducts().then((res) => {
         setItems(res);
+        setTitulo("Todos los Productos");
       });
     }
-  }, [params.id]);
+  }, [params.id, titulo]);
 
   return (
     <div>
-      <TituloPagina Titulo={"Productos"} />
+      <TituloPagina titulo={titulo} />
       <ItemList items1={items} />
     </div>
   );

@@ -1,54 +1,33 @@
-import React from "react";
-
-function ItemCount({
-  item,
+const ItemCount = ({
   cantidad,
-  handleClickSumar,
-  handleClickRestar,
-  agregarAlCarrito,
-}) {
+  handelRestar,
+  handelSumar,
+  handelAgregarCarrito,
+}) => {
   return (
-    <div className="flex gap-5">
-      <div>
-        <img
-          src={item.images}
-          alt={item.title}
-          className="object-contain w-[700px] aspect-square"
-        />
+    <div className="flex flex-col items-center">
+      <div className="flex justify-center gap-2 m-5 ">
+        <button
+          onClick={handelRestar}
+          className="items-center justify-center px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-blue-500 rounded-lg hover:bg-cyan-800"
+        >
+          -
+        </button>
+        <button>{cantidad}</button>
+        <button
+          onClick={handelSumar}
+          className="items-center justify-center px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-blue-500 rounded-lg hover:bg-cyan-800"
+        >
+          +
+        </button>
       </div>
-      <div className="flex flex-col gap-8 text-start">
-        <h2 className="p-2 font-bold underline uppercase truncate">
-          {item.title}
-        </h2>
-        <p className="text-gray-400">Descripcion: {item.description}</p>
-        <p className="text-gray-400">Stock: {item.stock}</p>
-        <p className="text-gray-400">${item.price}</p>
-
-        <div className="flex items-center justify-center m-5">
-          <button
-            onClick={handleClickRestar}
-            className="p-2 mx-2 text-sm bg-green-500 rounded-md hover:bg-green-600 "
-          >
-            -
-          </button>
-          <p className="flex items-center justify-center w-3 ">{cantidad}</p>
-          <button
-            onClick={handleClickSumar}
-            className="p-2 mx-2 text-sm bg-green-500 rounded-md hover:bg-green-600 "
-          >
-            +
-          </button>
-        </div>
-        <div className="flex items-center justify-center ">
-          <button
-            onClick={agregarAlCarrito}
-            className="p-2 text-center bg-green-500 rounded-md hover:bg-green-600 "
-          >
-            Agregar al Carrito
-          </button>
-        </div>
-      </div>
+      <button
+        onClick={handelAgregarCarrito}
+        className="px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-blue-500 rounded-lg hover:bg-cyan-800"
+      >
+        Agregar al Carrito
+      </button>
     </div>
   );
-}
+};
 export default ItemCount;
