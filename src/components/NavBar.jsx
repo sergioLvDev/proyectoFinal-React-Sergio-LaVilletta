@@ -8,7 +8,6 @@ function NavBar() {
       <NavLink to="/productos">Productos</NavLink>
       <NavLink to="/categoria/Shoes">Shoes</NavLink>
       <NavLink to="/categoria/Tools">Tools</NavLink>
-      <NavLink to="/contacto">Contacto</NavLink>
       <NavLink to="/carrito">
         <CartWidget />
       </NavLink>
