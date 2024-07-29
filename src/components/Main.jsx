@@ -4,6 +4,7 @@ import Carrito from "./Carrito";
 import Home from "./Home";
 import Contacto from "./Contacto";
 import ItemDetailContainer from "./ItemDetailContainer";
+import CheckOut from "./CheckOut";
 
 function Main() {
   return (
@@ -15,6 +16,7 @@ function Main() {
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/carrito" element={<Carrito />} />
+        <Route path="/checkout" element={<CheckOut />} />
       </Routes>
     </main>
   );
