@@ -16,8 +16,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.body {
+  @apply grid grid-rows-[auto_1fr_auto] h-full
+}
 
 
 a.active {
   @apply text-blue-500;
+}
+
+.nav {
+  @apply items-center gap-12 flex text-black
+}
+
+
+.abrir-menu {
+  @apply hidden text-black size-10
+}
+
+@media screen and (max-width: 768px) {
+
+  /*   .abrir-menu {
+    @apply block
+  }
+
+  .nav {
+    @apply hidden
+  } */
+  .nav {
+    @apply absolute flex-col top-0 right-0 w-56 min-h-dvh text-center bg-cyan-500
+  }
 }

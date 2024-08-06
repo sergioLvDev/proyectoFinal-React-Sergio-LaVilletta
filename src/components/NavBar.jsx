@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
-    <nav className="flex items-center gap-12 text-black text-1xl ">
+    <nav className="nav">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/productos">Productos</NavLink>
       <NavLink to="/categoria/Shoes">Shoes</NavLink>
