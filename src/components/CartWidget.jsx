@@ -5,7 +5,7 @@ function CartWidget() {
   const { cantidadEnCarrito } = useContext(CartContex);
 
   return (
-    <div className="flex flex-row items-center justify-around gap-4 mx-10 ">
+    <div className="flex flex-row items-center justify-around gap-4 mx-3 ">
       <img
         src="/imagenCarrito.png"
         alt="Imagen de un carrito"
