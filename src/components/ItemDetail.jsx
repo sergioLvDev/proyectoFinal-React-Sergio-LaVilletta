@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import { CartContex } from "./CartContex";
+import TituloPagina from "./TituloPagina";
 
 const ItemDetail = ({ item }) => {
   const { agregarCarrito } = useContext(CartContex);
@@ -16,24 +17,31 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-5">
-      <img src={item.images} alt={item.title} />
-      <div>
-        <h3>{item.title}</h3>
-        <p>Descricion:{item.description}</p>
-        <p>${item.price}</p>
-        <p>Stock: {item.stock}</p>
-        <p>Categoria: {item.category}</p>
-        <ItemCount
-          cantidad={cantidad}
-          handelRestar={handelRestar}
-          handelSumar={handelSumar}
-          handelAgregarCarrito={() => {
-            agregarCarrito(item, cantidad);
-          }}
+    <>
+      <TituloPagina titulo={"Item Detail"} />
+      <div className="flex items-center justify-center bg-slate-900 p-5 gap-5 max-[680px]:flex-col">
+        <img
+          src={item.images}
+          alt={item.title}
+          className="top-0 rounded-md w-80 max-[680px]:w-full"
         />
+        <div>
+          <h3>{item.title}</h3>
+          <p>Descricion:{item.description}</p>
+          <p>${item.price}</p>
+          <p>Stock: {item.stock}</p>
+          <p>Categoria: {item.category}</p>
+          <ItemCount
+            cantidad={cantidad}
+            handelRestar={handelRestar}
+            handelSumar={handelSumar}
+            handelAgregarCarrito={() => {
+              agregarCarrito(item, cantidad);
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default ItemDetail;

@@ -12,12 +12,21 @@ function Carrito() {
     <div>
       <TituloPagina titulo={"Carrito"} />
       {carrito.map((el) => (
-        <div key={el.id} className="flex items-end justify-start gap-8 ">
-          <img className="w-32 " src={el.images} alt={el.title} />
-          <h3 className="text-3xl font-bold">{el.title}</h3>
-          <p>Cantidad : {el.cantidad}</p>
-          <p>Precio Unitario: ${el.price}</p>
-          <p>Cantidad Total: {el.cantidad * el.price}</p>
+        <div
+          key={el.id}
+          className="flex gap-8 p-5 bg-slate-900 max-[450px]:flex-col "
+        >
+          <img
+            className="w-32 max-[680px]:object-contain"
+            src={el.images}
+            alt={el.title}
+          />
+          <div className="flex flex-col">
+            <h3 className="text-3xl font-bold">{el.title}</h3>
+            <p>Cantidad : {el.cantidad}</p>
+            <p>Precio Unitario: ${el.price}</p>
+            <p>Precio Total:$ {el.cantidad * el.price}</p>
+          </div>
         </div>
       ))}
       {carrito.length > 0 ? (
