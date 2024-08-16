@@ -7,26 +7,38 @@ import { getProducts, getProductsByCategory } from "../actions";
 function ItemListContainer() {
   const [items, setItems] = useState([]);
   const [titulo, setTitulo] = useState();
+  const [loading, setLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
     if (params.id) {
       getProductsByCategory(params.id).then((res) => {
-        setItems(res);
         setTitulo(params.id);
+        setItems(res);
       });
     } else {
       getProducts().then((res) => {
-        setItems(res);
-        setTitulo("Todos los Productos");
+        setTimeout(() => {
+          setTitulo("Todos los Productos");
+          setItems(res);
+          setLoading(false);
+        }, 1000);
       });
     }
-  }, [params.id, titulo]);
+  }, [params.id]);
 
   return (
     <div>
       <TituloPagina titulo={titulo} />
-      <ItemList items1={items} />
+      {loading ? (
+        <img
+          src="../spinner.gif"
+          alt="imagen de spinner"
+          className="w-20 m-auto rounded-full"
+        />
+      ) : (
+        <ItemList items1={items} />
+      )}
     </div>
   );
 }
