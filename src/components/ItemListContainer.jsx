@@ -14,17 +14,21 @@ function ItemListContainer() {
     if (params.id) {
       getProductsByCategory(params.id).then((res) => {
         setTitulo(params.id);
-        setItems(res);
+        setTimeout(() => {
+          setItems(res);
+          setLoading(false);
+        }, 100);
       });
     } else {
       getProducts().then((res) => {
+        setTitulo("Todos los Productos");
         setTimeout(() => {
-          setTitulo("Todos los Productos");
           setItems(res);
           setLoading(false);
-        }, 1000);
+        }, 100);
       });
     }
+    setLoading(true);
   }, [params.id]);
 
   return (

@@ -7,31 +7,49 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../actions";
 
 const CheckOut = () => {
+  const [loading, setLoading] = useState(true);
   const [pedidoId, setPedidoId] = useState("");
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContex);
 
   const { register, handleSubmit } = useForm();
 
   const comprar = (data) => {
-    const pedido = {
-      cliente: data,
-      pedido: carrito,
-      total: precioTotal(),
-    };
+    setTimeout(() => {
+      const pedido = {
+        cliente: data,
+        pedido: carrito,
+        total: precioTotal(),
+      };
 
-    const pedidosRef = collection(db, "pedidos");
-    addDoc(pedidosRef, pedido);
+      const pedidosRef = collection(db, "pedidos");
+      addDoc(pedidosRef, pedido);
 
-    addDoc(pedidosRef, pedido).then((doc) => {
-      setPedidoId(doc.id);
-      vaciarCarrito();
-    });
+      addDoc(pedidosRef, pedido).then((doc) => {
+        setPedidoId(doc.id);
+        vaciarCarrito();
+      });
+    }, 5000);
+    setLoading(false);
   };
   if (pedidoId) {
     return (
       <div className="flex flex-col items-center">
-        <h3 className="mb-4 text-3xl font-bold">Gracias por tu compra !!!</h3>
-        <p className="text-2xl font-bold">Tu número de pedido es: {pedidoId}</p>
+        {loading ? (
+          <img
+            src="../spinner.gif"
+            alt="imagen de spinner"
+            className="w-20 m-auto rounded-full"
+          />
+        ) : (
+          <>
+            <h3 className="mb-4 text-3xl font-bold">
+              Gracias por tu compra !!!
+            </h3>
+            <p className="text-2xl font-bold">
+              Tu número de pedido es: {pedidoId}
+            </p>
+          </>
+        )}
       </div>
     );
   }
