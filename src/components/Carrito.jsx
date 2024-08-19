@@ -31,7 +31,7 @@ function Carrito() {
       ))}
       {carrito.length > 0 ? (
         <div className="flex flex-col items-center justify-center gap-20">
-          <p className="m-10 font-sans text-5xl font-bold text-center text-blue-500">
+          <p className="m-10 font-sans text-5xl font-bold text-center text-blue-200">
             Suma Total : ${precioTotal()}
           </p>
           <div>

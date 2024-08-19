@@ -14,22 +14,19 @@ const CheckOut = () => {
   const { register, handleSubmit } = useForm();
 
   const comprar = (data) => {
-    setTimeout(() => {
-      const pedido = {
-        cliente: data,
-        pedido: carrito,
-        total: precioTotal(),
-      };
+    const pedido = {
+      cliente: data,
+      pedido: carrito,
+      total: precioTotal(),
+    };
 
-      const pedidosRef = collection(db, "pedidos");
-      addDoc(pedidosRef, pedido);
+    const pedidosRef = collection(db, "pedidos");
+    addDoc(pedidosRef, pedido);
 
-      addDoc(pedidosRef, pedido).then((doc) => {
-        setPedidoId(doc.id);
-        vaciarCarrito();
-      });
-    }, 5000);
-    setLoading(false);
+    addDoc(pedidosRef, pedido).then((doc) => {
+      setPedidoId(doc.id);
+      vaciarCarrito();
+    });
   };
   if (pedidoId) {
     return (
