@@ -8,7 +8,7 @@ function Item({ item }) {
         <img
           src={item.images}
           alt={item.title}
-          className="object-cover rounded-md aspect-square"
+          className="object-contain rounded-md"
         />
         <h2 className="font-bold truncate">{item.title}</h2>
         <p className="text-gray-400">${item.price}</p>

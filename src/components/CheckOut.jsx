@@ -1,13 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContex } from "./CartContex";
 import TituloPagina from "./TituloPagina";
 import { useForm } from "react-hook-form";
 import Button from "./Button";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../actions";
+import Swal from "sweetalert2";
 
 const CheckOut = () => {
-  const [loading, setLoading] = useState(true);
   const [pedidoId, setPedidoId] = useState("");
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContex);
 
@@ -26,30 +26,19 @@ const CheckOut = () => {
     addDoc(pedidosRef, pedido).then((doc) => {
       setPedidoId(doc.id);
       vaciarCarrito();
+      miForm.reset();
     });
   };
-  if (pedidoId) {
-    return (
-      <div className="flex flex-col items-center">
-        {loading ? (
-          <img
-            src="../spinner.gif"
-            alt="imagen de spinner"
-            className="w-20 m-auto rounded-full"
-          />
-        ) : (
-          <>
-            <h3 className="mb-4 text-3xl font-bold">
-              Gracias por tu compra !!!
-            </h3>
-            <p className="text-2xl font-bold">
-              Tu número de pedido es: {pedidoId}
-            </p>
-          </>
-        )}
-      </div>
-    );
-  }
+
+  useEffect(() => {
+    if (pedidoId) {
+      Swal.fire({
+        title: "Gracias por su compra!",
+        text: `Tu número de pedido es: ${pedidoId}`,
+        icon: "success",
+      });
+    }
+  }, [pedidoId]);
 
   const vaciar = () => {
     vaciarCarrito();
@@ -58,17 +47,32 @@ const CheckOut = () => {
   return (
     <div>
       <TituloPagina titulo={"Finalizar Compra"} />
-      <form onSubmit={handleSubmit(comprar)}>
+      <form id="miForm" onSubmit={handleSubmit(comprar)}>
         <div className="flex items-start gap-10 mx-3 mb-5 ">
           <div className="flex flex-col gap-2 ">
             <label htmlFor="nombre">Nombre</label>
             <label htmlFor="email">E-mail</label>
             <label htmlFor="telefono">Teléfono</label>
           </div>
-          <div className="flex flex-col gap-2">
-            <input type="text" required {...register("nombre")} />
-            <input type="email" required {...register("email")} />
-            <input type="tel" required {...register("telefono")} />
+          <div className="flex flex-col gap-2 ">
+            <input
+              type="text"
+              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
+              required
+              {...register("nombre")}
+            />
+            <input
+              type="email"
+              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
+              required
+              {...register("email")}
+            />
+            <input
+              type="tel"
+              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
+              required
+              {...register("telefono")}
+            />
           </div>
         </div>
         <Button text="Comprar" type="submit" />
