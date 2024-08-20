@@ -15,6 +15,7 @@ Este es un sitio web de e-commerce desarrollado con tecnologías modernas y efic
 - tailwindcss: Se utilizó Tailwind CSS como framework de CSS para crear estilos personalizados y responsivos.
 - firebase: Se utilizó Firebase como plataforma de backend para manejar el almacenamiento del sitio web.
 - Netlify: Se utilizó Netlify como plataforma de hosting y despliegue para deployar y servir la aplicación de manera rápida y segura.
+- Sweetalert: Se utilizó para mostrar alertas al usuario en la sección Checkout de la tienda online con el numero de pedido de compra generado.
 
 ## Instalacion y Uso
 

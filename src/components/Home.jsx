@@ -2,91 +2,63 @@ import TituloPagina from "./TituloPagina";
 
 function Home() {
   return (
-    <div>
-      <TituloPagina titulo={"Home"} />
-      <div className="relative flex items-center justify-center w-full dark:text-gray-900">
-        <button
-          aria-label="Slide back"
-          type="button"
-          className="absolute left-0 z-30 p-2 ml-10 bg-opacity-50 rounded-full focus:outline-none focus:dark:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:dark:ring-gray-600 dark:bg-gray-50"
-        >
-          <svg
-            width="8"
-            height="14"
-            fill="none"
-            viewBox="0 0 8 14"
-            className="w-4 h-4"
-          >
-            <path
-              d="M7 1L1 7L7 13"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
-        </button>
-        <div className="flex items-center justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
-          <div className="relative flex flex-shrink-0 w-full sm:w-auto">
-            <img
-              className="object-cover object-center dark:bg-gray-500 h-96 aspect-square"
-              src="https://http.dog/100.jpg"
-              alt="Image 1"
-            />
-          </div>
-          <div className="relative flex flex-shrink-0 w-full sm:w-auto">
-            <img
-              className="object-cover object-center dark:bg-gray-500 h-96 aspect-square"
-              src="https://cdn2.thecatapi.com/images/d6f.jpg"
-              alt="Image 2"
-            />
-          </div>
-          <div className="relative flex flex-shrink-0 w-full sm:w-auto">
-            <img
-              className="object-cover object-center dark:bg-gray-500 h-96 aspect-square"
-              src="https://loremflickr.com/640/480?lock=2728067248160768"
-              alt="Image 3"
-            />
-          </div>
-          <div className="relative flex flex-shrink-0 w-full sm:w-auto">
-            <img
-              className="object-cover object-center dark:bg-gray-500 h-96 aspect-square"
-              src="https://cdn2.thecatapi.com/images/cd2.jpg"
-              alt="Image 4"
-            />
-          </div>
-          <div className="relative flex flex-shrink-0 w-full sm:w-auto">
-            <img
-              className="object-cover object-center dark:bg-gray-500 h-96 aspect-square"
-              src="https://cdn2.thecatapi.com/images/ZfqxG7ZHH.jpg"
-              alt="Image 5"
-            />
-          </div>
+    <>
+      {/* <TituloPagina titulo={"Todo lo que buscas en un solo lugar!!!"} /> */}
+      <div className="flex items-center justify-center mt-12">
+        <div className="flex flex-col w-1/2 m-2 ">
+          <h1 className="mb-12 font-bold text-green-600 text-start text-7xl">
+            Bienvenidos a la Tienda Digital
+          </h1>
+          <p className="mr-5 font-serif text-xl text-right text-green-400 ">
+            Las mejores marcas y productos a la venta
+          </p>
         </div>
-        <button
-          aria-label="Slide forward"
-          id="next"
-          className="absolute right-0 z-30 p-2 mr-10 bg-opacity-50 rounded-full focus:outline-none focus:dark:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:dark:ring-gray-600 dark:bg-gray-50"
-        >
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4"
-          >
-            <path
-              d="M1 1L7 7L1 13"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
-        </button>
+
+        <div className="flex flex-row flex-wrap items-center justify-center w-1/2 gap-5 ">
+          <img
+            src="https://picsum.photos/id/237/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md -rotate-3"
+          />
+          <img
+            src="https://picsum.photos/id/238/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md rotate-3"
+          />
+          <img
+            src="https://picsum.photos/id/239/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md -rotate-3"
+          />
+
+          <img
+            src="https://picsum.photos/id/237/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md -rotate-3"
+          />
+          <img
+            src="https://picsum.photos/id/238/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md rotate-3"
+          />
+          <img
+            src="https://picsum.photos/id/239/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md -rotate-3"
+          />
+          <img
+            src="https://picsum.photos/id/238/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md rotate-3"
+          />
+          <img
+            src="https://picsum.photos/id/239/200/300.jpg"
+            alt="carrousel1"
+            className="w-1/5 rounded-md -rotate-3"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default Home;
