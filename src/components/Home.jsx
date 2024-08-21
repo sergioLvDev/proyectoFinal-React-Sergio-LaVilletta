@@ -16,7 +16,7 @@ function Home() {
 
         <div className="flex flex-row flex-wrap items-center justify-center w-1/2 gap-5 ">
           <img
-            src="https://picsum.photos/id/237/200/300.jpg"
+            src="/imagenesProductos/camperas/01.jpg"
             alt="carrousel1"
             className="w-1/5 rounded-md -rotate-3"
           />
@@ -34,7 +34,7 @@ function Home() {
           <img
             src="https://picsum.photos/id/237/200/300.jpg"
             alt="carrousel1"
-            className="w-1/5 rounded-md -rotate-3"
+            className="w-1/5 rounded-md rotate-3"
           />
           <img
             src="https://picsum.photos/id/238/200/300.jpg"

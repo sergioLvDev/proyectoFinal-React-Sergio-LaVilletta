@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "title": "Campera Inflable",
+    "category": "Camperas",
+    "description": "Campera inflable cómoda y resistente para actividades al aire libre.",
+    "price": 10550.99,
+    "stock": 10,
+    "images": "/imagenesProductos/camperas/01.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Campera Formal",
+    "category": "Camperas",
+    "description": "Campera Lisa Formal para eventos y ocaciones especiales.",
+    "price": 11260.99,
+    "stock": 12,
+    "images": "/imagenesProductos/camperas/02.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Campera Lisa",
+    "category": "Camperas",
+    "description": "Campera Lisa para eventos y ocaciones especiales.",
+    "price": 10300.99,
+    "stock": 19,
+    "images": "/imagenesProductos/camperas/03.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Campera Inflable Bicolor",
+    "category": "Camperas",
+    "description": "Campera Inflable bicolor resistente para actividades al aire libre.",
+    "price": 11090.99,
+    "stock": 13,
+    "images": "/imagenesProductos/camperas/04.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Campera Deportiva",
+    "category": "Camperas",
+    "description": "Campera Deportiva para hacer ejercicios.",
+    "price": 9890.99,
+    "stock": 22,
+    "images": "/imagenesProductos/camperas/04.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Pantalon Formal Beige",
+    "category": "Pantalones",
+    "description": "Pantalon formal para eventos.",
+    "price": 5890.99,
+    "stock": 12,
+    "images": "/imagenesProductos/pantalones/01.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Pantalon Marfil",
+    "category": "Pantalones",
+    "description": "Pantalon formal para eventos.",
+    "price": 6130.99,
+    "stock": 15,
+    "images": "/imagenesProductos/pantalones/02.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Pantalon Estilizado Negro",
+    "category": "Pantalones",
+    "description": "Pantalon Estilizado para ocaciones especiales.",
+    "price": 7253.99,
+    "stock": 19,
+    "images": "/imagenesProductos/pantalones/03.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Pantalon Formal Negro",
+    "category": "Pantalones",
+    "description": "Pantalon formal para eventos.",
+    "price": 7253.99,
+    "stock": 19,
+    "images": "/imagenesProductos/pantalones/04.jpg"
+  },
+  {
+    "id": "10",
+    "title": "Pantalon Estilizado Gris",
+    "category": "Pantalones",
+    "description": "Pantalon formal para eventos y ocaciones especiales.",
+    "price": 9253.99,
+    "stock": 11,
+    "images": "/imagenesProductos/pantalones/05.jpg"
+  },
+  {
+    "id": "11",
+    "title": "Remera Roja",
+    "category": "Remeras",
+    "description": "Remera Lisa informal para uso diario.",
+    "price": 5231.99,
+    "stock": 13,
+    "images": "/imagenesProductos/remeras/01.jpg"
+  },
+  {
+    "id": "12",
+    "title": "Remera Blanca Estampada",
+    "category": "Remeras",
+    "description": "Remera Estampada informal para uso diario.",
+    "price": 6234.99,
+    "stock": 13,
+    "images": "/imagenesProductos/remeras/02.jpg"
+  },
+  {
+    "id": "13",
+    "title": "Remera Verde",
+    "category": "Remeras",
+    "description": "Remera Lisa informal para uso diario.",
+    "price": 5131.99,
+    "stock": 16,
+    "images": "/imagenesProductos/remeras/03.jpg"
+  },
+  {
+    "id": "14",
+    "title": "Remera Azul",
+    "category": "Remeras",
+    "description": "Remera Lisa informal para uso diario.",
+    "price": 5221.99,
+    "stock": 18,
+    "images": "/imagenesProductos/remeras/04.jpg"
+  },
+  {
+    "id": "15",
+    "title": "Remera Salmon",
+    "category": "Remeras",
+    "description": "Remera Lisa informal para uso diario.",
+    "price": 4913.99,
+    "stock": 17,
+    "images": "/imagenesProductos/remeras/05.jpg"
+  },
+  {
+    "id": "16",
+    "title": "Zapatilla Converse",
+    "category": "Zapatillas",
+    "description": "Zapatilla casual para uso diario.",
+    "price": 23141.99,
+    "stock": 13,
+    "images": "/imagenesProductos/zapatillas/01.jpg"
+  },
+  {
+    "id": "17",
+    "title": "Zapatilla Adidas Roja",
+    "category": "Zapatillas",
+    "description": "Zapatilla casual para uso diario.",
+    "price": 20154.99,
+    "stock": 18,
+    "images": "/imagenesProductos/zapatillas/02.jpg"
+  },
+  {
+    "id": "18",
+    "title": "Zapatilla Adidas Blanca",
+    "category": "Zapatillas",
+    "description": "Zapatilla Deportivas para hacer ejercicios.",
+    "price": 22474.99,
+    "stock": 11,
+    "images": "/imagenesProductos/zapatillas/03.jpg"
+  },
+  {
+    "id": "19",
+    "title": "Zapatilla Puma Negra",
+    "category": "Zapatillas",
+    "description": "Zapatilla Deportivas para hacer ejercicios.",
+    "price": 20398.99,
+    "stock": 14,
+    "images": "/imagenesProductos/zapatillas/04.jpg"
+  },
+  {
+    "id": "20",
+    "title": "Zapatilla Adidas Negra",
+    "category": "Zapatillas",
+    "description": "Zapatilla Deportivas para hacer ejercicios.",
+    "price": 21454.99,
+    "stock": 16,
+    "images": "/imagenesProductos/zapatillas/05.jpg"
+  }
+]
