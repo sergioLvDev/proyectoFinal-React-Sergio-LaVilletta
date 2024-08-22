@@ -18,7 +18,7 @@ function Home() {
           <img
             src="/imagenesProductos/camperas/01.jpg"
             alt="carrousel1"
-            className="w-1/5 rounded-md -rotate-3"
+            className="w-1/5 rounded-md  -rotate-3"
           />
           <img
             src="https://picsum.photos/id/238/200/300.jpg"

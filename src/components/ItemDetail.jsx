@@ -27,7 +27,7 @@ const ItemDetail = ({ item }) => {
         />
         <div>
           <h3>{item.title}</h3>
-          <p>Descricion:{item.description}</p>
+          <p>Descripcion:{item.description}</p>
           <p>${item.price}</p>
           <p>Stock: {item.stock}</p>
           <p>Categoria: {item.category}</p>

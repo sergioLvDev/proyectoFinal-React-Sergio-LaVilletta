@@ -1,14 +1,29 @@
 import { app } from "./firebaseConfig";
+import tienda from "./tienda.json";
 import {
   getFirestore,
   collection,
   getDocs,
   query,
   where,
+  addDoc,
 } from "firebase/firestore";
 
 export const db = getFirestore(app);
 const collectionDeProductos = collection(db, "productos");
+
+export function generateProducts() {
+  return new Promise((resolve, reject) => {
+    resolve(tienda);
+
+    for (let i = 0; i < tienda.length; i++) {
+      const consulta = addDoc(collectionDeProductos, tienda[i]);
+    }
+
+    reject("Error");
+  });
+}
+/* generateProducts(); */
 
 export function getProducts() {
   return getDocs(collectionDeProductos)
@@ -51,3 +66,7 @@ export function getProductsById(id) {
     return producto;
   });
 }
+
+/* Api de prueba de prodctos !!! 
+("https://api.escuelajs.co/api/v1/products") */
+/* loremflickr.com */
