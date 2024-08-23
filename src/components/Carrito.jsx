@@ -17,7 +17,7 @@ function Carrito() {
           className="flex gap-8 p-5 bg-slate-900 max-[450px]:flex-col "
         >
           <img
-            className="w-32 max-[680px]:object-contain"
+            className="w-32 max-[680px]:object-contain rounded-sm"
             src={el.images}
             alt={el.title}
           />
