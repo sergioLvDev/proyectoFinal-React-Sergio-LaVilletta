@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
 
   return (
     <>
-      <TituloPagina titulo={"Item Detail"} />
+      <TituloPagina titulo={"Detalle del Producto"} />
       <div className="flex items-center justify-center bg-slate-900 p-5 gap-5 max-[680px]:flex-col">
         <img
           src={item.images}

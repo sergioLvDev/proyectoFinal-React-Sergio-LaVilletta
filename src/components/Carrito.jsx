@@ -9,7 +9,7 @@ function Carrito() {
     vaciarCarrito();
   };
   return (
-    <div>
+    <div className="pb-5">
       <TituloPagina titulo={"Carrito"} />
       {carrito.map((el) => (
         <div
