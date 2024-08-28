@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
-    <nav className=" flex items-center justify-center gap-5 p-2  text-black max-[450px]:flex-col ">
+    <nav className=" flex items-center justify-center gap-5 p-2  text-black max-[530px]:flex-col ">
       <NavLink to="/" className={"itemhover"}>
         Home
       </NavLink>
