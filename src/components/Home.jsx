@@ -27,11 +27,11 @@ function Home() {
         </div>
       </div>
 
-      <div className="grid justify-center max-[530px]:grid-cols-1 w-1/2 grid-cols-2 gap-8 p-8 m-auto lg:grid-cols-4 place-content-center ">
+      <div className="grid max-[530px]:grid-cols-1 w-1/2  max-[875px]:w-full  grid-cols-2 gap-8 p-8 place-content-center place-items-center lg:grid-cols-4  ">
         <img
           src="/imagenesProductos/camperas/01.jpg"
           alt="carrousel1"
-          className="object-cover w-40 h-48 rounded-md hover:scale-110 hover:rotate-0 hover:transition-all -rotate-3"
+          className="w-40 h-48 rounded-md hover:scale-110 hover:rotate-0 hover:transition-all -rotate-3"
         />
         <img
           src="/imagenesProductos/remeras/01.jpg"
@@ -41,7 +41,7 @@ function Home() {
         <img
           src="/imagenesProductos/pantalones/01.jpg"
           alt="carrousel1"
-          className="object-cover w-40 h-48 rounded-md hover:scale-110 hover:rotate-0 min-w-[120px] hover:transition-all -rotate-3"
+          className="object-cover w-40 h-48 rounded-md hover:scale-110 hover:rotate-0 hover:transition-all -rotate-3"
         />
 
         <img
