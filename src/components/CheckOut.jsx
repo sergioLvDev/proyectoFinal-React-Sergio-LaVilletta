@@ -46,7 +46,7 @@ const CheckOut = () => {
 
   return (
     <div>
-      <TituloPagina titulo={"Finalizar Compra"} />
+      <TituloPagina titulo={"Contacto"} />
       <form id="miForm" onSubmit={handleSubmit(comprar)}>
         <div className="flex items-start gap-10 mx-3 mb-5 ">
           <div className="flex flex-col gap-2 ">
@@ -75,7 +75,14 @@ const CheckOut = () => {
             />
           </div>
         </div>
-        <Button text="Comprar" type="submit" />
+        <br />
+        <Button text="Enviar Consultar" type="submit" />
+        <br />
+        <Button
+          text="Finalizar Compra"
+          type="submit"
+          className="bg-green-500!"
+        />
       </form>
     </div>
   );

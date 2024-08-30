@@ -45,7 +45,7 @@ function Carrito() {
               className="px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-green-500 rounded-lg hover:bg-cyan-800"
               to="/checkout"
             >
-              Finalizar Compra
+              Continuar Compra
             </Link>
           </div>
         </div>
