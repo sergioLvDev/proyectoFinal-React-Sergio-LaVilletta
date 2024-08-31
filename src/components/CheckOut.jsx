@@ -19,6 +19,7 @@ const CheckOut = () => {
       pedido: carrito,
       total: precioTotal(),
     };
+    console.log(pedido);
 
     const pedidosRef = collection(db, "pedidos");
     addDoc(pedidosRef, pedido);
@@ -53,6 +54,7 @@ const CheckOut = () => {
             <label htmlFor="nombre">Nombre</label>
             <label htmlFor="email">E-mail</label>
             <label htmlFor="telefono">Teléfono</label>
+            <label htmlFor="consulta">Consulta</label>
           </div>
           <div className="flex flex-col gap-2 ">
             <input
@@ -73,16 +75,27 @@ const CheckOut = () => {
               required
               {...register("telefono")}
             />
+            <textarea
+              name="consulta"
+              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
+              type="text"
+              id="consulta"
+              cols="30"
+              rows="10"
+              placeholder="Escriba su consulta"
+              {...register("consulta")}
+            ></textarea>
           </div>
         </div>
         <br />
+
         <Button text="Enviar Consultar" type="submit" />
-        <br />
-        <Button
-          text="Finalizar Compra"
+        <button
           type="submit"
-          className="bg-green-500!"
-        />
+          className="inline px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-green-500 rounded-lg hover:bg-green-400"
+        >
+          Finalizar Compra
+        </button>
       </form>
     </div>
   );
