@@ -39,7 +39,7 @@ Inicie la aplicación utilizando el comando `npm run dev`
 
 Acceda a la aplicación en su navegador favorito utilizando la dirección `http://localhost:5173`
 
-### 6.Podes ver el DEMO de este proyecto [Aqui-!!!](https://react-tpfinal.netlify.app/)
+### 6.Podes ver el DEMO de este proyecto [Aqui-!!!](https://e-commerce-sergiolvdev.netlify.app/)
 
 ## Contribuciones
 
