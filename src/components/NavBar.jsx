@@ -7,7 +7,7 @@ function NavBar() {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <nav className="flex items-center justify-center gap-5 p-2 text-black max-[530px]:flex-col relative">
+    <nav className="relative flex flex-col items-center justify-center gap-5 p-2 text-black sm:flex-row">
       <NavLink to="/" className="itemhover">
         Inicio
       </NavLink>
@@ -24,7 +24,7 @@ function NavBar() {
           <ChevronDown className="inline-flex ml-1" />
         </div>
         {dropdown && (
-          <ul className=" z-10 w-32 bg-cyan-500 shadow-lg rounded-b-lg min-[530px]:absolute">
+          <ul className="z-10 w-32 rounded-b-lg shadow-lg bg-cyan-500 sm:absolute">
             <li className="block">
               <NavLink
                 to="/categoria/Remeras"
