@@ -16,6 +16,11 @@ function Home() {
       <div>
         <Carousel className="bg-white " autoplay={true} loop={true}>
           <img
+            src="../imagenesProductos/banner3.jpg"
+            alt="ban3"
+            className="object-contain w-full h-full"
+          />
+          <img
             src="../imagenesProductos/banner1.png"
             alt="ban1"
             className="top-0 object-contain w-full h-full bg-"
@@ -23,11 +28,6 @@ function Home() {
           <img
             src="../imagenesProductos/banner2.jpg"
             alt="ban2"
-            className="object-contain w-full h-full"
-          />
-          <img
-            src="../imagenesProductos/banner3.jpg"
-            alt="ban3"
             className="object-contain w-full h-full"
           />
         </Carousel>
