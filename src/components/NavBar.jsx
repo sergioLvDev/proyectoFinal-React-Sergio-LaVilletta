@@ -19,7 +19,7 @@ function NavBar() {
         onMouseEnter={() => setDropdown(true)}
         onMouseLeave={() => setDropdown(false)}
       >
-        <div className="flex items-center cursor-pointer itemhover">
+        <div className="flex items-center cursor-pointer w-[134px] itemhover">
           Categorías
           <ChevronDown className="inline-flex ml-1" />
         </div>
