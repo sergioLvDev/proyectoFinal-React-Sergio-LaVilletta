@@ -5,9 +5,9 @@ import { Carousel } from "@material-tailwind/react";
 function Home() {
   return (
     <div className="flex flex-col justify-center">
-      <div className="h-[80px] flex justify-center items-center  bg-cyan-800">
+      <div className="h-[60px] flex justify-center items-center  bg-cyan-800">
         <Fade duration={3000} cascade>
-          <h1 className="px-4 m-2 font-serif text-3xl font-extrabold text-center text-black ">
+          <h1 className="font-sans text-xl font-extrabold text-center text-black sm:text-3xl">
             Bienvenidos a la Tienda Digital
           </h1>
         </Fade>
@@ -34,7 +34,7 @@ function Home() {
       </div>
       <div className=" bg-cyan-600">
         <Slide duration={2000}>
-          <p className="mx-5 font-serif text-xl max-[520px]:text-base text-black sm:text-right ">
+          <p className="mx-5 font-serif text-center text-black sm:text-right text-md ">
             Las mejores marcas y productos a la venta
           </p>
         </Slide>

@@ -7,7 +7,7 @@ function NavBar() {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <nav className="relative flex flex-col items-center justify-center gap-5 p-2 text-black sm:flex-row">
+    <nav className="relative flex flex-col items-center justify-center gap-2 text-black sm:flex-row">
       <NavLink to="/" className="itemhover">
         Inicio
       </NavLink>
