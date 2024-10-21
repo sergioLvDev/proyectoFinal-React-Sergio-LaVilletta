@@ -3,11 +3,15 @@ import CartWidget from "./CartWidget";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-function NavBar() {
+function NavBar({ clicked }) {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <nav className="relative flex-col items-center justify-center hidden gap-2 text-black sm:flex sm:flex-row">
+    <nav
+      className={`relative flex-col gap-2 text-black menuNav sm:flex sm:flex-row ${
+        clicked ? "hidden" : ""
+      }`}
+    >
       <NavLink to="/" className="itemhover">
         Inicio
       </NavLink>
