@@ -8,8 +8,8 @@ function NavBar({ clicked }) {
 
   return (
     <nav
-      className={`relative flex-col gap-2 text-black menuNav sm:flex sm:flex-row ${
-        clicked ? "hidden" : ""
+      className={`relative flex-col gap-2 text-black menuNav sm:flex sm:flex-row transition-all duration-500 ease-linear ${
+        clicked ? "h-[0vh] opacity-0 overflow-hidden " : "h-[36vh] opacity-100"
       }`}
     >
       <NavLink to="/" className="itemhover">

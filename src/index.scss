@@ -33,7 +33,7 @@ a.active {
 }
 
 .menuBtn {
-  @apply cursor-pointer flex flex-col w-8 h-12 mx-2 bg-transparent border-0 justify-center items-center gap-2;
+  @apply cursor-pointer flex flex-col w-[31px] h-12 mx-2 bg-transparent border-0 justify-center items-center gap-2;
 }
 
 .menuBtn>div {

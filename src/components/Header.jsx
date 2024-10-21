@@ -20,9 +20,9 @@ function Header() {
           </h1>
         </NavLink>
         <div className="menuBtn" onClick={handleClick}>
-          <div className={clicked ? "hover:transform rotate-45" : ""}></div>
-          <div className={clicked ? "opacity-0" : ""}></div>
-          <div className={clicked ? "hover:transform -rotate-45" : ""}></div>
+          <div className={clicked ? "" : "hover:transform rotate-45"}></div>
+          <div className={clicked ? "" : "opacity-0"}></div>
+          <div className={clicked ? "" : "hover:transform -rotate-45"}></div>
         </div>
       </div>
       <div>
