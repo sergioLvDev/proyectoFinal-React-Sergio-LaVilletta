@@ -46,58 +46,59 @@ const CheckOut = () => {
   };
 
   return (
-    <div>
+    <>
       <TituloPagina titulo={"Contacto"} />
-      <form id="miForm" onSubmit={handleSubmit(comprar)}>
-        <div className="flex items-start gap-10 mx-3 mb-5 ">
-          <div className="flex flex-col gap-2 ">
-            <label htmlFor="nombre">Nombre</label>
-            <label htmlFor="email">E-mail</label>
-            <label htmlFor="telefono">Teléfono</label>
-            <label htmlFor="consulta">Consulta</label>
+      <div className="flex flex-col items-center my-5">
+        <form id="miForm" onSubmit={handleSubmit(comprar)}>
+          <div className="flex items-start gap-10 mx-3 mb-5 ">
+            <div className="flex flex-col gap-2 ">
+              <label htmlFor="nombre">Nombre</label>
+              <input
+                type="text"
+                className="w-[300px] sm:w-[500px]  rounded-sm"
+                required
+                {...register("nombre")}
+              />
+              <label htmlFor="email">E-mail</label>
+              <input
+                type="email"
+                className="w-[300px]  sm:w-[500px] rounded-sm"
+                required
+                {...register("email")}
+              />
+              <label htmlFor="telefono">Teléfono</label>
+              <input
+                type="tel"
+                className="w-[300px] sm:w-[500px]  rounded-sm"
+                required
+                {...register("telefono")}
+              />
+              <label htmlFor="consulta">Consulta</label>
+              <textarea
+                name="consulta"
+                className="w-[300px] sm:w-[500px]  rounded-sm"
+                type="text"
+                id="consulta"
+                cols="30"
+                rows="10"
+                placeholder="Escriba su consulta"
+                {...register("consulta")}
+              ></textarea>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 ">
-            <input
-              type="text"
-              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
-              required
-              {...register("nombre")}
-            />
-            <input
-              type="email"
-              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
-              required
-              {...register("email")}
-            />
-            <input
-              type="tel"
-              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
-              required
-              {...register("telefono")}
-            />
-            <textarea
-              name="consulta"
-              className="w-[400px] max-[550px]:w-[200px] rounded-sm"
-              type="text"
-              id="consulta"
-              cols="30"
-              rows="10"
-              placeholder="Escriba su consulta"
-              {...register("consulta")}
-            ></textarea>
+          <br />
+          <div className="flex justify-center">
+            <Button text="Enviar Consultar" type="submit" />
+            <button
+              type="submit"
+              className="px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-green-500 rounded-lg hover:bg-green-400"
+            >
+              Finalizar Compra
+            </button>
           </div>
-        </div>
-        <br />
-
-        <Button text="Enviar Consultar" type="submit" />
-        <button
-          type="submit"
-          className="inline px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-green-500 rounded-lg hover:bg-green-400"
-        >
-          Finalizar Compra
-        </button>
-      </form>
-    </div>
+        </form>
+      </div>
+    </>
   );
 };
 export default CheckOut;
