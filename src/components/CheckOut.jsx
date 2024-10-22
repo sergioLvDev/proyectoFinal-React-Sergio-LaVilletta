@@ -2,7 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import { CartContex } from "./CartContex";
 import TituloPagina from "./TituloPagina";
 import { useForm } from "react-hook-form";
-import Button from "./Button";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../actions";
 import Swal from "sweetalert2";
@@ -47,7 +46,7 @@ const CheckOut = () => {
 
   return (
     <>
-      <TituloPagina titulo={"Contacto"} />
+      <TituloPagina titulo={"Datos del Cliente"} />
       <div className="flex flex-col items-center my-5">
         <form id="miForm" onSubmit={handleSubmit(comprar)}>
           <div className="flex items-start gap-10 mx-3 mb-5 ">
@@ -73,7 +72,7 @@ const CheckOut = () => {
                 required
                 {...register("telefono")}
               />
-              <label htmlFor="consulta">Consulta</label>
+              <label htmlFor="consulta">Observaciones</label>
               <textarea
                 name="consulta"
                 className="w-[300px] sm:w-[500px]  rounded-sm"
@@ -88,7 +87,6 @@ const CheckOut = () => {
           </div>
           <br />
           <div className="flex justify-center">
-            <Button text="Enviar Consultar" type="submit" />
             <button
               type="submit"
               className="px-4 py-2 mx-2 text-sm font-bold text-white transition-all bg-green-500 rounded-lg hover:bg-green-400"

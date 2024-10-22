@@ -19,11 +19,11 @@ const ItemDetail = ({ item }) => {
   return (
     <>
       <TituloPagina titulo={"Detalle del Producto"} />
-      <div className="flex items-center justify-center bg-slate-900 p-5 gap-5 max-[680px]:flex-col">
+      <div className="flex flex-col items-center justify-center gap-5 p-5 bg-slate-900 sm:flex-row ">
         <img
           src={item.images}
           alt={item.title}
-          className="top-0 rounded-md w-80 max-[680px]:w-full"
+          className="top-0 object-contain rounded-md w-full max-w-[300px]"
         />
         <div>
           <h3>{item.title}</h3>
