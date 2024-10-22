@@ -15,35 +15,56 @@ const Contacto = () => {
           />
         </div>
 
-        <form className="rounded-tl-3xl rounded-bl-3xl">
+        <form
+          className=" rounded-tl-3xl rounded-bl-3xl"
+          autoComplete="off"
+          netlify
+          name="contact"
+        >
           <h2 className="mb-6 text-2xl font-bold text-center text-blue-600">
             Contacto
           </h2>
           <div className="relative max-w-md mx-auto">
-            <label className="ml-1 text-gray-600">Nombre</label>
+            <label className="ml-1 text-gray-600" for="name">
+              Nombre
+            </label>
             <input
               type="text"
+              id="name"
+              name="name"
               className="w-full px-4 py-3 mb-2 text-sm text-black bg-gray-300 rounded-md required outline-blue-600"
             />
-            <label className="ml-1 text-gray-600">Correo Electrónico</label>
+            <label className="ml-1 text-gray-600" for="email">
+              Correo Electrónico
+            </label>
             <input
+              id="email"
+              name="email"
               type="email"
               className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md required outline-blue-600 focus-within:bg-transparent"
             />
-            <label className="ml-1 text-gray-600">Teléfono</label>
+            <label className="ml-1 text-gray-600" for="tel">
+              Teléfono
+            </label>
             <input
+              id="tel"
+              name="tel"
               type="tel"
               className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             />
 
-            <label className="ml-1 text-gray-600">Comentarios</label>
+            <label className="ml-1 text-gray-600" for="comments">
+              Comentarios
+            </label>
             <textarea
+              id="comments"
+              name="comments"
               rows="6"
               className="w-full px-4 pt-3 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             ></textarea>
 
             <button
-              type="button"
+              type="submit"
               className="text-white w-full relative bg-blue-500 hover:bg-blue-600 rounded-md text-sm px-6 py-3 !mt-6"
             >
               <svg
