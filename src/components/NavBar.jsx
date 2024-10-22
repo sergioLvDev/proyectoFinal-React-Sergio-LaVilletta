@@ -82,7 +82,7 @@ function NavBar() {
             </ul>
           )}
         </div>
-        <NavLink to="/checkout" className="block itemhover hover:bg-cyan-600">
+        <NavLink to="/contacto" className="block itemhover hover:bg-cyan-600">
           Contacto
         </NavLink>
         <NavLink to="/carrito" className="itemhover">
