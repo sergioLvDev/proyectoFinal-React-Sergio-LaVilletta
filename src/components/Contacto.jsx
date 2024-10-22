@@ -15,9 +15,8 @@ const Contacto = () => {
           />
         </div>
 
-        <form
+        <htmlForm
           className=" rounded-tl-3xl rounded-bl-3xl"
-          autoComplete="off"
           netlify
           name="contact"
         >
@@ -25,7 +24,7 @@ const Contacto = () => {
             Contacto
           </h2>
           <div className="relative max-w-md mx-auto">
-            <label className="ml-1 text-gray-600" for="name">
+            <label className="ml-1 text-gray-600" htmlFor="name">
               Nombre
             </label>
             <input
@@ -34,16 +33,16 @@ const Contacto = () => {
               name="name"
               className="w-full px-4 py-3 mb-2 text-sm text-black bg-gray-300 rounded-md required outline-blue-600"
             />
-            <label className="ml-1 text-gray-600" for="email">
+            <label className="ml-1 text-gray-600" htmlFor="email">
               Correo Electrónico
             </label>
             <input
               id="email"
               name="email"
               type="email"
-              className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md required outline-blue-600 focus-within:bg-transparent"
+              className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md required outline-blue-600 "
             />
-            <label className="ml-1 text-gray-600" for="tel">
+            <label className="ml-1 text-gray-600" htmlFor="tel">
               Teléfono
             </label>
             <input
@@ -53,7 +52,7 @@ const Contacto = () => {
               className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             />
 
-            <label className="ml-1 text-gray-600" for="comments">
+            <label className="ml-1 text-gray-600" htmlFor="comments">
               Comentarios
             </label>
             <textarea
@@ -85,7 +84,7 @@ const Contacto = () => {
               Enviar
             </button>
           </div>
-        </form>
+        </htmlForm>
       </div>
     </div>
   );
