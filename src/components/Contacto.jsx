@@ -15,6 +15,7 @@ const Contacto = () => {
         </div>
         <form
           data-netlify="true" // para netlify
+          method="POST"
           className=" rounded-tl-3xl rounded-bl-3xl"
           name="contactecommerce"
         >
