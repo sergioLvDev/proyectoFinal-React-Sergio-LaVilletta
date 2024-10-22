@@ -5,7 +5,6 @@ const Contacto = () => {
     <div className="m-2 font-[sans-serif] max-w-6xl xl:mx-auto  relative bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl overflow-hidden mt-4">
       <div className="absolute w-20 h-20 bg-blue-400 rounded-full -bottom-6 -left-6"></div>
       <div className="absolute w-20 h-20 bg-blue-400 rounded-full -top-6 -right-6"></div>
-
       <div className="grid gap-8 px-6 py-8 md:grid-cols-2">
         <div className="flex flex-col items-center justify-center text-center">
           <img
@@ -14,10 +13,9 @@ const Contacto = () => {
             className="w-5/6 shrink-0"
           />
         </div>
-
         <form
-          className=" rounded-tl-3xl rounded-bl-3xl"
           data-netlify="true" // para netlify
+          className=" rounded-tl-3xl rounded-bl-3xl"
           name="contactecommerce"
         >
           <h2 className="mb-6 text-2xl font-bold text-center text-blue-600">
