@@ -18,7 +18,7 @@ const Contacto = () => {
         <form
           className=" rounded-tl-3xl rounded-bl-3xl"
           data-netlify="true" // para netlify
-          name="contact"
+          name="contactecommerce"
         >
           <h2 className="mb-6 text-2xl font-bold text-center text-blue-600">
             Contacto
@@ -28,22 +28,22 @@ const Contacto = () => {
             <input
               type="text"
               id="name"
-              name="name"
-              className="w-full px-4 py-3 mb-2 text-sm text-black bg-gray-300 rounded-md required outline-blue-600"
+              name="nameeco"
+              className="w-full px-4 py-1 mb-2 text-sm text-black bg-gray-300 rounded-md required outline-blue-600"
             />
             <label className="ml-1 text-gray-600">Correo Electrónico</label>
             <input
               id="email"
-              name="email"
+              name="emaileco"
               type="email"
-              className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md required outline-blue-600 "
+              className="w-full px-4 py-1 text-sm text-black bg-gray-300 rounded-md required outline-blue-600 "
             />
             <label className="ml-1 text-gray-600">Teléfono</label>
             <input
               id="tel"
-              name="tel"
+              name="teleco"
               type="tel"
-              className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
+              className="w-full px-4 py-1 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             />
 
             <label className="ml-1 text-gray-600">Comentarios</label>
