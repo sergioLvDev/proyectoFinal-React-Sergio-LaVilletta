@@ -15,36 +15,30 @@ const Contacto = () => {
           />
         </div>
 
-        <htmlForm
+        <form
           className=" rounded-tl-3xl rounded-bl-3xl"
-          netlify
+          data-netlify="true" // para netlify
           name="contact"
         >
           <h2 className="mb-6 text-2xl font-bold text-center text-blue-600">
             Contacto
           </h2>
           <div className="relative max-w-md mx-auto">
-            <label className="ml-1 text-gray-600" htmlFor="name">
-              Nombre
-            </label>
+            <label className="ml-1 text-gray-600">Nombre</label>
             <input
               type="text"
               id="name"
               name="name"
               className="w-full px-4 py-3 mb-2 text-sm text-black bg-gray-300 rounded-md required outline-blue-600"
             />
-            <label className="ml-1 text-gray-600" htmlFor="email">
-              Correo Electrónico
-            </label>
+            <label className="ml-1 text-gray-600">Correo Electrónico</label>
             <input
               id="email"
               name="email"
               type="email"
               className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md required outline-blue-600 "
             />
-            <label className="ml-1 text-gray-600" htmlFor="tel">
-              Teléfono
-            </label>
+            <label className="ml-1 text-gray-600">Teléfono</label>
             <input
               id="tel"
               name="tel"
@@ -52,9 +46,7 @@ const Contacto = () => {
               className="w-full px-4 py-3 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             />
 
-            <label className="ml-1 text-gray-600" htmlFor="comments">
-              Comentarios
-            </label>
+            <label className="ml-1 text-gray-600">Comentarios</label>
             <textarea
               id="comments"
               name="comments"
@@ -84,7 +76,7 @@ const Contacto = () => {
               Enviar
             </button>
           </div>
-        </htmlForm>
+        </form>
       </div>
     </div>
   );
