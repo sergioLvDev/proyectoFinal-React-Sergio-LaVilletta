@@ -19,10 +19,10 @@ const Contacto = () => {
           />
         </div>
         <form
+          action="/contacto"
           className=" rounded-tl-3xl rounded-bl-3xl"
           name="contact"
           method="POST"
-          data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="form-name" value="contact" />
           <h2 className="mb-6 text-2xl font-bold text-center text-blue-600">
