@@ -10,6 +10,12 @@
 
 <body>
   <div id="root" class="flex flex-col min-h-dvh"></div>
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="text" id="name" name="name">
+    <input type="email" id="email" name="email">
+    <input type="tel" id="tel" name="tel">
+    <textarea type="text" id="message" name="message"></textarea>
+  </form>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
