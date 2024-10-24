@@ -53,7 +53,7 @@ const Contacto = () => {
               type="tel"
               className="w-full px-4 py-1 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             />
-
+            {/* 
             <label className="ml-1 text-gray-600" htmlFor="comments">
               Comentarios
             </label>
@@ -64,7 +64,7 @@ const Contacto = () => {
               rows="6"
               className="w-full px-4 pt-3 text-sm text-black bg-gray-300 rounded-md outline-blue-600 focus-within:bg-transparent"
             ></textarea>
-
+ */}
             <button
               type="submit"
               className="text-white w-full relative bg-blue-500 hover:bg-blue-600 rounded-md text-sm px-6 py-3 !mt-6"
