@@ -3,7 +3,6 @@ import ItemListContainer from "./ItemListContainer";
 import { Carousel } from "@material-tailwind/react";
 import TituloPagina from "./TituloPagina";
 import { NavLink } from "react-router-dom";
-import { Typography } from "@material-tailwind/react";
 
 function Home() {
   return (
@@ -48,7 +47,7 @@ function Home() {
         <NavLink to="/categoria/Zapatillas " className="relative">
           <img
             className="object-cover object-center w-full max-w-full rounded-lg"
-            src="./public/imagenesProductos/zapatillas/01.jpg"
+            src="../imagenesProductos/zapatillas/01.jpg"
             alt="gallery-photo"
           />
           <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
@@ -58,7 +57,7 @@ function Home() {
         <NavLink to="/categoria/Pantalones" className="relative">
           <img
             className="object-cover object-center w-full max-w-full rounded-lg"
-            src="/public/imagenesProductos/pantalones/01.jpg"
+            src="../imagenesProductos/pantalones/01.jpg"
             alt="gallery-photo"
           />
           <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
@@ -69,7 +68,7 @@ function Home() {
         <NavLink to="/categoria/Remeras" className="relative">
           <img
             className="object-cover object-center w-full max-w-full rounded-lg"
-            src="../public/imagenesProductos/remeras/01.jpg"
+            src="../imagenesProductos/remeras/01.jpg"
             alt="gallery-photo"
           />
           <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
@@ -79,7 +78,7 @@ function Home() {
         <NavLink to="/categoria/Camperas" className="relative">
           <img
             className="object-cover object-center w-full max-w-full rounded-lg"
-            src="../public/imagenesProductos/camperas/01.jpg"
+            src="../imagenesProductos/camperas/01.jpg"
             alt="gallery-photo"
           />
           <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
