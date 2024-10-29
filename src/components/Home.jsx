@@ -3,6 +3,7 @@ import ItemListContainer from "./ItemListContainer";
 import { Carousel } from "@material-tailwind/react";
 import TituloPagina from "./TituloPagina";
 import { NavLink } from "react-router-dom";
+import { Typography } from "@material-tailwind/react";
 
 function Home() {
   return (
@@ -43,27 +44,47 @@ function Home() {
       </div>
       <TituloPagina titulo={"Categorias"} />
 
-      <div className="grid grid-cols-1 gap-4 m-4 sm:grid-cols-2 md:grid-cols-4">
-        <NavLink to="/categoria/Zapatillas">
-          <div className="flex items-center justify-center w-full h-72 bg-cover  rounded-lg bg-[url('../public/imagenesProductos/zapatillas/04.jpg')]">
-            <span className="cate">Zapatillas</span>
-          </div>
+      <div className="grid grid-cols-2 gap-4 m-4 md:grid-cols-4">
+        <NavLink to="/categoria/Zapatillas " className="relative">
+          <img
+            className="object-cover object-center w-full max-w-full rounded-lg"
+            src="../public/imagenesProductos/zapatillas/01.jpg"
+            alt="gallery-photo"
+          />
+          <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
+            Zapatillas
+          </figcaption>
         </NavLink>
-        <NavLink to="/categoria/Pantalones">
-          <div className="flex items-center justify-center w-full h-full bg-cover  rounded-lg bg-[url('../public/imagenesProductos/pantalones/03.jpg')]">
-            <span className="cate">Pantalones</span>
-          </div>
+        <NavLink to="/categoria/Pantalones" className="relative">
+          <img
+            className="object-cover object-center w-full max-w-full rounded-lg"
+            src="../public/imagenesProductos/pantalones/01.jpg"
+            alt="gallery-photo"
+          />
+          <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
+            Pantalones
+          </figcaption>
         </NavLink>
 
-        <NavLink to="/categoria/Remeras">
-          <div className="flex items-center justify-center w-full h-full bg-cover  rounded-lg bg-[url('../public/imagenesProductos/remeras/01.jpg')]">
-            <span className="cate">Remeras</span>
-          </div>
+        <NavLink to="/categoria/Remeras" className="relative">
+          <img
+            className="object-cover object-center w-full max-w-full rounded-lg"
+            src="../public/imagenesProductos/remeras/01.jpg"
+            alt="gallery-photo"
+          />
+          <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
+            Remeras
+          </figcaption>
         </NavLink>
-        <NavLink to="/categoria/Camperas">
-          <div className="flex items-center justify-center w-full h-full bg-cover  rounded-lg bg-[url('../public/imagenesProductos/camperas/02.jpg')]">
-            <span className="cate">Camperas</span>
-          </div>
+        <NavLink to="/categoria/Camperas" className="relative">
+          <img
+            className="object-cover object-center w-full max-w-full rounded-lg"
+            src="../public/imagenesProductos/camperas/01.jpg"
+            alt="gallery-photo"
+          />
+          <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
+            Camperas
+          </figcaption>
         </NavLink>
       </div>
 
