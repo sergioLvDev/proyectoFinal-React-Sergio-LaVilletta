@@ -1,6 +1,8 @@
 import { Slide, Fade } from "react-awesome-reveal";
 import ItemListContainer from "./ItemListContainer";
 import { Carousel } from "@material-tailwind/react";
+import TituloPagina from "./TituloPagina";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -39,6 +41,32 @@ function Home() {
           </p>
         </Slide>
       </div>
+      <TituloPagina titulo={"Categorias"} />
+
+      <div className="grid grid-cols-1 gap-4 m-4 sm:grid-cols-2 md:grid-cols-4">
+        <NavLink to="/categoria/Zapatillas">
+          <div className="flex items-center justify-center w-full h-72 bg-cover  rounded-lg bg-[url('../public/imagenesProductos/zapatillas/04.jpg')]">
+            <span className="cate">Zapatillas</span>
+          </div>
+        </NavLink>
+        <NavLink to="/categoria/Pantalones">
+          <div className="flex items-center justify-center w-full h-full bg-cover  rounded-lg bg-[url('../public/imagenesProductos/pantalones/03.jpg')]">
+            <span className="cate">Pantalones</span>
+          </div>
+        </NavLink>
+
+        <NavLink to="/categoria/Remeras">
+          <div className="flex items-center justify-center w-full h-full bg-cover  rounded-lg bg-[url('../public/imagenesProductos/remeras/01.jpg')]">
+            <span className="cate">Remeras</span>
+          </div>
+        </NavLink>
+        <NavLink to="/categoria/Camperas">
+          <div className="flex items-center justify-center w-full h-full bg-cover  rounded-lg bg-[url('../public/imagenesProductos/camperas/02.jpg')]">
+            <span className="cate">Camperas</span>
+          </div>
+        </NavLink>
+      </div>
+
       <ItemListContainer />
     </div>
   );

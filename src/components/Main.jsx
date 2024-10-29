@@ -8,7 +8,7 @@ import CheckOut from "./CheckOut";
 
 function Main() {
   return (
-    <main className=" grow">
+    <main className="grow">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categoria/:id" element={<ItemListContainer />} />
