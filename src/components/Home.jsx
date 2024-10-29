@@ -48,7 +48,7 @@ function Home() {
         <NavLink to="/categoria/Zapatillas " className="relative">
           <img
             className="object-cover object-center w-full max-w-full rounded-lg"
-            src="../public/imagenesProductos/zapatillas/01.jpg"
+            src="./public/imagenesProductos/zapatillas/01.jpg"
             alt="gallery-photo"
           />
           <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
@@ -58,7 +58,7 @@ function Home() {
         <NavLink to="/categoria/Pantalones" className="relative">
           <img
             className="object-cover object-center w-full max-w-full rounded-lg"
-            src="../public/imagenesProductos/pantalones/01.jpg"
+            src="/public/imagenesProductos/pantalones/01.jpg"
             alt="gallery-photo"
           />
           <figcaption className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 cate">
