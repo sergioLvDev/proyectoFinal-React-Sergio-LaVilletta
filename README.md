@@ -21,7 +21,7 @@ Este es un sitio web de e-commerce desarrollado con tecnologías modernas y efic
 
 ### 1. Clonar el repositorio
 
-Clone el repositorio utilizando el comando `git clone https://github.com/[username]/tienda-e-commerce.git`
+Clone el repositorio utilizando el comando `git clone https://github.com/sergioLvDev/tienda-e-commerce.git`
 
 ### 2. Instalar dependencias
 
@@ -35,11 +35,8 @@ Configure Firebase creando un proyecto en la consola de Firebase y agregue la co
 
 Inicie la aplicación utilizando el comando `npm run dev`
 
-### 5. Acceder a la aplicación
 
-Acceda a la aplicación en su navegador favorito utilizando la dirección `http://localhost:5173`
-
-### 6.Podes ver el DEMO de este proyecto [Aqui-!!!](https://e-commerce-sergiolvdev.netlify.app/)
+### 5.Podes ver el despliegue de este proyecto [Aqui-!!!](https://e-commerce-sergiolvdev.netlify.app/)
 
 ## Contribuciones
 
